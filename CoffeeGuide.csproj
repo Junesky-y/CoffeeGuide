@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Content Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Json\en\" />
+    <Folder Include="Data\Json\uk\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="wwwroot\images\beans\" />
+    <Folder Include="wwwroot\images\milk\" />
+    <Folder Include="wwwroot\images\brewing\" />
+    <Folder Include="wwwroot\images\recipes\" />
+    <Folder Include="wwwroot\images\syrups\" />
+  </ItemGroup>
+
+</Project>
