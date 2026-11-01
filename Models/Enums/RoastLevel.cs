@@ -1,6 +1,9 @@
-﻿namespace CoffeeGuide.Models.Enums
+﻿namespace CoffeeGuide.Models.Enums;
+
+public enum RoastLevel
 {
-    public class RoastLevel
-    {
-    }
+    Light,
+    Medium,
+    MediumDark,
+    Dark
 }
