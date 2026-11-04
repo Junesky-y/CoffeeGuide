@@ -1,4 +1,4 @@
-﻿using CoffeeGuide.Models.Enums;
+using CoffeeGuide.Models.Enums;
 
 namespace CoffeeGuide.Models;
 

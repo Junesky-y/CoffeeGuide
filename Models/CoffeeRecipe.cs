@@ -1,4 +1,4 @@
-﻿using CoffeeGuide.Models.Enums;
+using CoffeeGuide.Models.Enums;
 
 namespace CoffeeGuide.Models;
 
@@ -18,4 +18,5 @@ public class CoffeeRecipe
     public int? RecommendedMilkId { get; set; }
     public List<int> RecommendedSyrupIds { get; set; } = new();
     public int? Servings { get; set; }
+    public bool IsFeatured { get; set; }               // показувати на головній
 }

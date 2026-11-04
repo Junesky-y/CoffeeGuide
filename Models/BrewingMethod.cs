@@ -1,4 +1,4 @@
-﻿namespace CoffeeGuide.Models;
+namespace CoffeeGuide.Models;
 
 public class BrewingMethod
 {
@@ -14,4 +14,5 @@ public class BrewingMethod
     public string? CoffeeToWaterRatio { get; set; }    // наприклад "1:16"
     public List<string> Steps { get; set; } = new();   // порядок у списку = порядок кроків
     public string? ImagePath { get; set; }
+    public bool IsFeatured { get; set; }               // показувати на головній
 }

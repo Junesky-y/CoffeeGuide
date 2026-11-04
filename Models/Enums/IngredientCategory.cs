@@ -1,4 +1,4 @@
-﻿namespace CoffeeGuide.Models.Enums;
+namespace CoffeeGuide.Models.Enums;
 
 public enum IngredientCategory { Coffee, Milk, Syrup, Water, Sweetener, Topping, Other }
 
