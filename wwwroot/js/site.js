@@ -1,4 +1,8 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+// Загальна поведінка сайту.
+// Фільтри працюють і без JavaScript (кнопка «Застосувати»); тут лише зручність:
+// форми з атрибутом data-autosubmit відправляються одразу після вибору значення.
+document.querySelectorAll('form[data-autosubmit] select').forEach(function (select) {
+    select.addEventListener('change', function () {
+        select.form.submit();
+    });
+});

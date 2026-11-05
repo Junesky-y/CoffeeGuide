@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="App_Name" xml:space="preserve"><value>Посібник зі створення кави</value></data>
+  <data name="Skip_To_Content" xml:space="preserve"><value>Перейти до змісту</value></data>
+  <data name="Footer_Text" xml:space="preserve"><value>© {0} Посібник зі створення кави. Навчальний проєкт.</value></data>
+  <data name="Nav_Main" xml:space="preserve"><value>Головна навігація</value></data>
+  <data name="Nav_ToggleMenu" xml:space="preserve"><value>Відкрити меню</value></data>
+  <data name="Nav_Home" xml:space="preserve"><value>Головна</value></data>
+  <data name="Nav_Beans" xml:space="preserve"><value>Кавові зерна</value></data>
+  <data name="Nav_Milk" xml:space="preserve"><value>Молоко</value></data>
+  <data name="Nav_Syrups" xml:space="preserve"><value>Сиропи</value></data>
+  <data name="Nav_Methods" xml:space="preserve"><value>Способи приготування</value></data>
+  <data name="Nav_Recipes" xml:space="preserve"><value>Рецепти</value></data>
+  <data name="Nav_Search" xml:space="preserve"><value>Пошук</value></data>
+  <data name="Lang_Switch" xml:space="preserve"><value>Мова інтерфейсу</value></data>
+  <data name="Home_Title" xml:space="preserve"><value>Кавова енциклопедія</value></data>
+  <data name="Home_Lead" xml:space="preserve"><value>Дізнавайтеся про кавові зерна, молоко, сиропи, способи приготування та рецепти улюблених напоїв.</value></data>
+  <data name="Home_ShowAll" xml:space="preserve"><value>Усі рецепти</value></data>
+  <data name="Home_Explore" xml:space="preserve"><value>Розділи енциклопедії</value></data>
+  <data name="Home_Featured" xml:space="preserve"><value>Рекомендовані напої</value></data>
+  <data name="Home_Methods" xml:space="preserve"><value>Популярні способи приготування</value></data>
+  <data name="Home_Count" xml:space="preserve"><value>Записів: {0}</value></data>
+  <data name="Home_Culture_Title" xml:space="preserve"><value>Кава як культура</value></data>
+  <data name="Home_Culture_Text" xml:space="preserve"><value>Кава — це не лише напій, а й частина щоденних ритуалів: від швидкого еспресо біля стійки до неквапливої чашки вдома. У різних країнах склалися власні способи її готувати та пити. Ця енциклопедія допоможе краще зрозуміти зерна, молоко, добавки та техніки приготування.</value></data>
+  <data name="Tile_Beans" xml:space="preserve"><value>Походження, обсмажування та смакові ноти зерен.</value></data>
+  <data name="Tile_Milk" xml:space="preserve"><value>Тваринне й рослинне молоко та його піна.</value></data>
+  <data name="Tile_Syrups" xml:space="preserve"><value>Смакові сиропи та добавки до кави.</value></data>
+  <data name="Tile_Methods" xml:space="preserve"><value>Обладнання, помел, температура та кроки.</value></data>
+  <data name="Tile_Recipes" xml:space="preserve"><value>Напої, інгредієнти, історія та культура.</value></data>
+  <data name="Beans_Lead" xml:space="preserve"><value>Каталог кавових зерен: походження, різновид, ступінь обсмажування та смакові ноти.</value></data>
+  <data name="Milk_Lead" xml:space="preserve"><value>Види молока та рослинні альтернативи: текстура, смак і здатність утворювати піну.</value></data>
+  <data name="Syrups_Lead" xml:space="preserve"><value>Сиропи та добавки: смаковий профіль і рекомендовані поєднання.</value></data>
+  <data name="Methods_Lead" xml:space="preserve"><value>Способи приготування кави: обладнання, помел, температура води, співвідношення та кроки.</value></data>
+  <data name="Recipes_Lead" xml:space="preserve"><value>Рецепти кавових напоїв, їхні інгредієнти, історія та культурний контекст.</value></data>
+  <data name="Filter_All" xml:space="preserve"><value>Усі</value></data>
+  <data name="Filter_Origin" xml:space="preserve"><value>Походження</value></data>
+  <data name="Filter_Variety" xml:space="preserve"><value>Різновид</value></data>
+  <data name="Filter_Roast" xml:space="preserve"><value>Ступінь обсмажування</value></data>
+  <data name="Filter_Category" xml:space="preserve"><value>Категорія</value></data>
+  <data name="Filter_DrinkName" xml:space="preserve"><value>Назва напою</value></data>
+  <data name="Filter_Apply" xml:space="preserve"><value>Застосувати</value></data>
+  <data name="Filter_Reset" xml:space="preserve"><value>Скинути</value></data>
+  <data name="Empty_Results" xml:space="preserve"><value>Нічого не знайдено. Спробуйте змінити фільтри.</value></data>
+  <data name="Search_Label" xml:space="preserve"><value>Пошуковий запит</value></data>
+  <data name="Search_Placeholder" xml:space="preserve"><value>Назва або опис…</value></data>
+  <data name="Search_Button" xml:space="preserve"><value>Знайти</value></data>
+  <data name="Search_Prompt" xml:space="preserve"><value>Введіть запит, щоб знайти зерна, молоко, сиропи, способи приготування чи рецепти.</value></data>
+  <data name="Search_NoResults" xml:space="preserve"><value>За запитом «{0}» нічого не знайдено.</value></data>
+  <data name="Search_Found" xml:space="preserve"><value>Знайдено: {0}</value></data>
+  <data name="Card_Details" xml:space="preserve"><value>Докладніше</value></data>
+  <data name="Modal_Loading" xml:space="preserve"><value>Завантаження…</value></data>
+  <data name="Modal_Error" xml:space="preserve"><value>Не вдалося завантажити дані. Спробуйте ще раз.</value></data>
+  <data name="Modal_NotFound" xml:space="preserve"><value>Запис не знайдено.</value></data>
+  <data name="Modal_Close" xml:space="preserve"><value>Закрити</value></data>
+  <data name="Modal_Retry" xml:space="preserve"><value>Повторити</value></data>
+  <data name="Sec_Origin" xml:space="preserve"><value>Походження</value></data>
+  <data name="Sec_Variety" xml:space="preserve"><value>Різновид</value></data>
+  <data name="Sec_Roast" xml:space="preserve"><value>Обсмажування</value></data>
+  <data name="Sec_Processing" xml:space="preserve"><value>Спосіб обробки</value></data>
+  <data name="Sec_Flavors" xml:space="preserve"><value>Смакові ноти</value></data>
+  <data name="Sec_BrewingMethods" xml:space="preserve"><value>Рекомендовані способи приготування</value></data>
+  <data name="Sec_Category" xml:space="preserve"><value>Категорія</value></data>
+  <data name="Sec_Fat" xml:space="preserve"><value>Вміст жиру</value></data>
+  <data name="Sec_Texture" xml:space="preserve"><value>Текстура</value></data>
+  <data name="Sec_Foam" xml:space="preserve"><value>Піна</value></data>
+  <data name="Sec_FlavorProfile" xml:space="preserve"><value>Смаковий профіль</value></data>
+  <data name="Sec_RecommendedRecipes" xml:space="preserve"><value>Рекомендовані напої</value></data>
+  <data name="Sec_Grind" xml:space="preserve"><value>Помел</value></data>
+  <data name="Sec_Temp" xml:space="preserve"><value>Температура води</value></data>
+  <data name="Sec_Time" xml:space="preserve"><value>Час приготування</value></data>
+  <data name="Sec_Ratio" xml:space="preserve"><value>Співвідношення кави й води</value></data>
+  <data name="Sec_Equipment" xml:space="preserve"><value>Обладнання</value></data>
+  <data name="Sec_Steps" xml:space="preserve"><value>Кроки</value></data>
+  <data name="Sec_Servings" xml:space="preserve"><value>Порцій</value></data>
+  <data name="Sec_Ingredients" xml:space="preserve"><value>Інгредієнти</value></data>
+  <data name="Sec_Preparation" xml:space="preserve"><value>Приготування</value></data>
+  <data name="Sec_History" xml:space="preserve"><value>Історія та культура</value></data>
+  <data name="Sec_Bean" xml:space="preserve"><value>Рекомендоване зерно</value></data>
+  <data name="Sec_Milk" xml:space="preserve"><value>Рекомендоване молоко</value></data>
+  <data name="Sec_Syrups" xml:space="preserve"><value>Рекомендовані сиропи</value></data>
+  <data name="Unit_C" xml:space="preserve"><value>°C</value></data>
+  <data name="Unit_Min" xml:space="preserve"><value>хв</value></data>
+  <data name="Unit_Sec" xml:space="preserve"><value>с</value></data>
+  <data name="RoastLevel_Light" xml:space="preserve"><value>Світле</value></data>
+  <data name="RoastLevel_Medium" xml:space="preserve"><value>Середнє</value></data>
+  <data name="RoastLevel_MediumDark" xml:space="preserve"><value>Середньо-темне</value></data>
+  <data name="RoastLevel_Dark" xml:space="preserve"><value>Темне</value></data>
+  <data name="MilkCategory_Animal" xml:space="preserve"><value>Тваринне</value></data>
+  <data name="MilkCategory_Plant" xml:space="preserve"><value>Рослинне</value></data>
+  <data name="SyrupCategory_Fruit" xml:space="preserve"><value>Фруктові</value></data>
+  <data name="SyrupCategory_Nut" xml:space="preserve"><value>Горіхові</value></data>
+  <data name="SyrupCategory_Spice" xml:space="preserve"><value>Пряні</value></data>
+  <data name="SyrupCategory_Sweet" xml:space="preserve"><value>Солодкі</value></data>
+  <data name="SyrupCategory_Other" xml:space="preserve"><value>Інші</value></data>
+  <data name="RecipeCategory_Black" xml:space="preserve"><value>Чорна кава</value></data>
+  <data name="RecipeCategory_MilkBased" xml:space="preserve"><value>Молочні напої</value></data>
+  <data name="RecipeCategory_Iced" xml:space="preserve"><value>Холодні напої</value></data>
+  <data name="RecipeCategory_Dessert" xml:space="preserve"><value>Десертні напої</value></data>
+  <data name="Error_Title_404" xml:space="preserve"><value>Сторінку не знайдено</value></data>
+  <data name="Error_Text_404" xml:space="preserve"><value>Можливо, адресу введено з помилкою або запис більше не існує.</value></data>
+  <data name="Error_Title_Data" xml:space="preserve"><value>Не вдалося завантажити дані</value></data>
+  <data name="Error_Text_Data" xml:space="preserve"><value>Контент тимчасово недоступний. Спробуйте пізніше.</value></data>
+  <data name="Error_Title_Generic" xml:space="preserve"><value>Щось пішло не так</value></data>
+  <data name="Error_Text_Generic" xml:space="preserve"><value>Сталася помилка. Спробуйте оновити сторінку або повернутися на головну.</value></data>
+  <data name="Error_Back_Home" xml:space="preserve"><value>На головну</value></data>
+</root>

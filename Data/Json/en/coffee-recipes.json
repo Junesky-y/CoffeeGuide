@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "slug": "espresso",
+    "name": "Espresso",
+    "category": "Black",
+    "shortDescription": "A concentrated drink made by forcing hot water through ground coffee.",
+    "fullDescription": "Espresso is the base of most drinks on a coffee-shop menu. A small serving has a rich flavor, a dense body and a layer of foam called crema. It is drunk on its own or used as the base for cappuccino, latte and other drinks.",
+    "imagePath": null,
+    "historyAndCulture": "Espresso originated in Italy. The first machines that brewed coffee with steam pressure appeared in the late 19th and early 20th centuries, and the drink became a symbol of Italian coffee culture: it is drunk quickly, often standing at the bar.",
+    "preparationMethod": "Grind the beans finely and tamp the coffee in the portafilter.\nStart the extraction in the espresso machine and collect about 30 ml of drink.\nServe immediately while the crema lasts.",
+    "ingredients": [
+      {
+        "ingredientId": 7,
+        "quantity": 9,
+        "unit": "g",
+        "displayOrder": 1
+      }
+    ],
+    "recommendedCoffeeBeanId": 6,
+    "recommendedMilkId": null,
+    "recommendedSyrupIds": [],
+    "servings": 1,
+    "isFeatured": true
+  },
+  {
+    "id": 2,
+    "slug": "americano",
+    "name": "Americano",
+    "category": "Black",
+    "shortDescription": "Espresso diluted with hot water.",
+    "fullDescription": "Americano is a longer and milder drink than espresso. You can change the amount of water depending on how strong you want it.",
+    "imagePath": null,
+    "historyAndCulture": "According to a popular legend, the name is linked to American soldiers in Italy who diluted espresso with water. The accuracy of this story is debated, so it is best treated as a legend.",
+    "preparationMethod": "Prepare the espresso.\nAdd hot water.\nServe immediately.",
+    "ingredients": [
+      {
+        "ingredientId": 1,
+        "quantity": 30,
+        "unit": "ml",
+        "displayOrder": 1
+      },
+      {
+        "ingredientId": 2,
+        "quantity": 90,
+        "unit": "ml",
+        "displayOrder": 2
+      }
+    ],
+    "recommendedCoffeeBeanId": 6,
+    "recommendedMilkId": null,
+    "recommendedSyrupIds": [],
+    "servings": 1,
+    "isFeatured": false
+  },
+  {
+    "id": 3,
+    "slug": "cappuccino",
+    "name": "Cappuccino",
+    "category": "MilkBased",
+    "shortDescription": "Espresso with milk and milk foam.",
+    "fullDescription": "Cappuccino combines espresso, hot milk and a layer of milk foam. The drink is known for a balanced taste in which coffee and milk blend harmoniously.",
+    "imagePath": null,
+    "historyAndCulture": "The name is usually linked to the color of the habits worn by Capuchin friars: the color of the drink resembles their robes. This explanation is often cited in coffee literature.",
+    "preparationMethod": "Prepare the espresso.\nFroth the milk into a dense warm foam.\nSlowly pour the milk into the espresso and spoon the foam on top.",
+    "ingredients": [
+      {
+        "ingredientId": 1,
+        "quantity": 30,
+        "unit": "ml",
+        "displayOrder": 1
+      },
+      {
+        "ingredientId": 3,
+        "quantity": 120,
+        "unit": "ml",
+        "displayOrder": 2
+      }
+    ],
+    "recommendedCoffeeBeanId": 6,
+    "recommendedMilkId": 1,
+    "recommendedSyrupIds": [
+      3,
+      4
+    ],
+    "servings": 1,
+    "isFeatured": true
+  },
+  {
+    "id": 4,
+    "slug": "latte",
+    "name": "Latte",
+    "category": "MilkBased",
+    "shortDescription": "Espresso with plenty of hot milk and a thin layer of foam.",
+    "fullDescription": "Latte is a soft, gentle drink with much more milk than coffee. It is often served in a tall glass or a large cup.",
+    "imagePath": null,
+    "historyAndCulture": "The name comes from the Italian caffè latte, meaning \"coffee with milk\". In Italy the word latte on its own simply means \"milk\", so people there order a caffè latte.",
+    "preparationMethod": "Prepare the espresso.\nWarm and lightly froth the milk.\nPour the milk into the espresso, leaving a thin layer of foam on top.",
+    "ingredients": [
+      {
+        "ingredientId": 1,
+        "quantity": 30,
+        "unit": "ml",
+        "displayOrder": 1
+      },
+      {
+        "ingredientId": 3,
+        "quantity": 200,
+        "unit": "ml",
+        "displayOrder": 2
+      }
+    ],
+    "recommendedCoffeeBeanId": 3,
+    "recommendedMilkId": 1,
+    "recommendedSyrupIds": [
+      1,
+      2,
+      3
+    ],
+    "servings": 1,
+    "isFeatured": true
+  },
+  {
+    "id": 5,
+    "slug": "iced-latte",
+    "name": "Iced latte",
+    "category": "Iced",
+    "shortDescription": "A cold latte: espresso, cold milk and ice.",
+    "fullDescription": "Iced latte is a refreshing version of latte served over ice. It is easy to adapt: add a syrup or choose a plant-based milk.",
+    "imagePath": null,
+    "historyAndCulture": null,
+    "preparationMethod": "Fill a glass with ice.\nPour in the cold milk.\nAdd the espresso and, if you like, a syrup. Stir gently.",
+    "ingredients": [
+      {
+        "ingredientId": 1,
+        "quantity": 30,
+        "unit": "ml",
+        "displayOrder": 1
+      },
+      {
+        "ingredientId": 3,
+        "quantity": 150,
+        "unit": "ml",
+        "displayOrder": 2
+      },
+      {
+        "ingredientId": 4,
+        "quantity": null,
+        "unit": "to taste",
+        "displayOrder": 3
+      }
+    ],
+    "recommendedCoffeeBeanId": 2,
+    "recommendedMilkId": 3,
+    "recommendedSyrupIds": [
+      1,
+      2,
+      5
+    ],
+    "servings": 1,
+    "isFeatured": false
+  },
+  {
+    "id": 6,
+    "slug": "mocha",
+    "name": "Mocha",
+    "category": "Dessert",
+    "shortDescription": "Espresso with chocolate and hot milk.",
+    "fullDescription": "Mocha combines coffee, chocolate and milk. It is a sweeter, more dessert-like drink than a regular latte.",
+    "imagePath": null,
+    "historyAndCulture": "The name is linked to the port city of Mocha in Yemen, historically an important hub of the coffee trade.",
+    "preparationMethod": "Melt the chocolate in hot milk.\nPrepare the espresso.\nCombine the chocolate milk with the espresso.",
+    "ingredients": [
+      {
+        "ingredientId": 1,
+        "quantity": 30,
+        "unit": "ml",
+        "displayOrder": 1
+      },
+      {
+        "ingredientId": 5,
+        "quantity": 20,
+        "unit": "g",
+        "displayOrder": 2
+      },
+      {
+        "ingredientId": 3,
+        "quantity": 150,
+        "unit": "ml",
+        "displayOrder": 3
+      }
+    ],
+    "recommendedCoffeeBeanId": 3,
+    "recommendedMilkId": 1,
+    "recommendedSyrupIds": [
+      2
+    ],
+    "servings": 1,
+    "isFeatured": false
+  },
+  {
+    "id": 7,
+    "slug": "affogato",
+    "name": "Affogato",
+    "category": "Dessert",
+    "shortDescription": "A scoop of ice cream topped with hot espresso.",
+    "fullDescription": "Affogato is a simple dessert drink built on the contrast of hot and cold. Serve it immediately, before the ice cream melts.",
+    "imagePath": null,
+    "historyAndCulture": "The name comes from the Italian word affogato, meaning \"drowned\": the ice cream seems to drown in the espresso.",
+    "preparationMethod": "Put a scoop of vanilla ice cream in a glass or cup.\nPrepare the espresso.\nPour the espresso over the ice cream and serve immediately.",
+    "ingredients": [
+      {
+        "ingredientId": 6,
+        "quantity": 1,
+        "unit": "scoop",
+        "displayOrder": 1
+      },
+      {
+        "ingredientId": 1,
+        "quantity": 30,
+        "unit": "ml",
+        "displayOrder": 2
+      }
+    ],
+    "recommendedCoffeeBeanId": 6,
+    "recommendedMilkId": null,
+    "recommendedSyrupIds": [],
+    "servings": 1,
+    "isFeatured": true
+  }
+]

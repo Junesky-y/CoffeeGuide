@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1,
+    "slug": "espresso-machine",
+    "name": "Espresso machine",
+    "description": "Hot water under pressure passes through a tightly packed bed of ground coffee and produces a concentrated drink in a short time.",
+    "equipment": [
+      "Espresso machine",
+      "Grinder",
+      "Tamper",
+      "Scale"
+    ],
+    "recommendedGrindSize": "Fine",
+    "waterTemperatureMinC": 90,
+    "waterTemperatureMaxC": 96,
+    "brewTimeSeconds": 30,
+    "coffeeToWaterRatio": null,
+    "steps": [
+      "Grind the beans finely and measure the dose.",
+      "Distribute the coffee evenly in the portafilter and tamp it.",
+      "Lock the portafilter into the group and start the extraction.",
+      "Stop the extraction once you have the desired amount and serve immediately."
+    ],
+    "imagePath": null,
+    "isFeatured": true
+  },
+  {
+    "id": 2,
+    "slug": "pour-over",
+    "name": "Pour-over (V60)",
+    "description": "A filter method where hot water is slowly poured over ground coffee in a dripper with a paper filter. The cup tastes clean and clear.",
+    "equipment": [
+      "Dripper",
+      "Paper filters",
+      "Gooseneck kettle",
+      "Scale",
+      "Grinder"
+    ],
+    "recommendedGrindSize": "Medium-fine",
+    "waterTemperatureMinC": 92,
+    "waterTemperatureMaxC": 96,
+    "brewTimeSeconds": 180,
+    "coffeeToWaterRatio": "1:16",
+    "steps": [
+      "Place the filter in the dripper, rinse it with hot water and discard the water.",
+      "Add the ground coffee and level the surface.",
+      "Wet the coffee with a small amount of water and wait 30–45 seconds.",
+      "Slowly pour the remaining water in circles in several stages.",
+      "Wait until the water drains through and serve."
+    ],
+    "imagePath": null,
+    "isFeatured": true
+  },
+  {
+    "id": 3,
+    "slug": "french-press",
+    "name": "French press",
+    "description": "An immersion method: coffee steeps in hot water in a carafe, then a plunger with a mesh filter separates the grounds. The result is rich with a noticeable body.",
+    "equipment": [
+      "French press",
+      "Kettle",
+      "Scale",
+      "Grinder",
+      "Timer"
+    ],
+    "recommendedGrindSize": "Coarse",
+    "waterTemperatureMinC": 92,
+    "waterTemperatureMaxC": 96,
+    "brewTimeSeconds": 240,
+    "coffeeToWaterRatio": "1:15",
+    "steps": [
+      "Grind the coffee coarsely and add it to the carafe.",
+      "Pour hot water over it so that all the grounds are wet.",
+      "Cover with the lid without pressing the plunger and wait about 4 minutes.",
+      "Slowly press the plunger down.",
+      "Pour the coffee into cups right away so it does not over-extract on the grounds."
+    ],
+    "imagePath": null,
+    "isFeatured": false
+  },
+  {
+    "id": 4,
+    "slug": "aeropress",
+    "name": "AeroPress",
+    "description": "A compact device in which coffee steeps with water and is then pressed through a filter with a plunger. Parameters depend heavily on the chosen recipe, so only general steps are given here.",
+    "equipment": [
+      "AeroPress",
+      "Paper filter",
+      "Kettle",
+      "Scale",
+      "Grinder"
+    ],
+    "recommendedGrindSize": "Depends on the recipe",
+    "waterTemperatureMinC": null,
+    "waterTemperatureMaxC": null,
+    "brewTimeSeconds": null,
+    "coffeeToWaterRatio": null,
+    "steps": [
+      "Insert the filter into the cap and rinse it with hot water.",
+      "Add the ground coffee to the chamber.",
+      "Add water and stir.",
+      "Insert the plunger and wait for the time given in your recipe.",
+      "Press slowly until you hear the hiss of air."
+    ],
+    "imagePath": null,
+    "isFeatured": false
+  },
+  {
+    "id": 5,
+    "slug": "moka-pot",
+    "name": "Moka pot",
+    "description": "A pot in which steam pressure pushes hot water up through ground coffee. The result is strong and concentrated, but it is not true espresso because the pressure is much lower.",
+    "equipment": [
+      "Moka pot",
+      "Stove",
+      "Grinder"
+    ],
+    "recommendedGrindSize": "Medium-fine",
+    "waterTemperatureMinC": null,
+    "waterTemperatureMaxC": null,
+    "brewTimeSeconds": null,
+    "coffeeToWaterRatio": null,
+    "steps": [
+      "Fill the bottom chamber with water up to the safety valve.",
+      "Fill the funnel with coffee and level it without tamping.",
+      "Screw on the top part tightly.",
+      "Place it on low or medium heat with the lid open.",
+      "When the coffee stops rising, remove it from the heat and serve."
+    ],
+    "imagePath": null,
+    "isFeatured": true
+  }
+]

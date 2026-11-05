@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "slug": "whole-milk",
+    "name": "Whole cow's milk",
+    "category": "Animal",
+    "fatContentPercent": null,
+    "texture": "Creamy and rich",
+    "foamingProperties": "Froths well and gives dense, stable foam",
+    "flavorProfile": "Mild, slightly sweet",
+    "description": "A classic choice for cappuccino and latte. Fat content depends on the producer and is printed on the package.",
+    "imagePath": null
+  },
+  {
+    "id": 2,
+    "slug": "skim-milk",
+    "name": "Skim milk",
+    "category": "Animal",
+    "fatContentPercent": null,
+    "texture": "Light and thin",
+    "foamingProperties": "Creates voluminous foam easily, but it is usually airier and less creamy",
+    "flavorProfile": "Neutral, less rich",
+    "description": "Milk with minimal fat. It is less noticeable in the cup, so the coffee stays in the foreground.",
+    "imagePath": null
+  },
+  {
+    "id": 3,
+    "slug": "oat-milk",
+    "name": "Oat milk",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Creamy and soft",
+    "foamingProperties": "Depends on the brand; \"barista\" editions usually froth better",
+    "flavorProfile": "Mild, slightly cereal-like",
+    "description": "One of the most common plant-based alternatives in coffee shops. It pairs well with espresso.",
+    "imagePath": null
+  },
+  {
+    "id": 4,
+    "slug": "soy-milk",
+    "name": "Soy milk",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Medium-bodied",
+    "foamingProperties": "Usually froths well; may curdle in very hot or acidic coffee",
+    "flavorProfile": "Noticeable beany note",
+    "description": "A long-standing plant-based alternative to cow's milk. For coffee it is better not to overheat it.",
+    "imagePath": null
+  },
+  {
+    "id": 5,
+    "slug": "almond-milk",
+    "name": "Almond milk",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Light and thin",
+    "foamingProperties": "Foam is usually less stable",
+    "flavorProfile": "Nutty, slightly sweet",
+    "description": "A light plant-based alternative with a nutty accent. It suits cold drinks.",
+    "imagePath": null
+  }
+]

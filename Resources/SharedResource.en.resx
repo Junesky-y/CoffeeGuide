@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="App_Name" xml:space="preserve"><value>Coffee Encyclopedia &amp; Brewing Guide</value></data>
+  <data name="Skip_To_Content" xml:space="preserve"><value>Skip to content</value></data>
+  <data name="Footer_Text" xml:space="preserve"><value>© {0} Coffee Encyclopedia &amp; Brewing Guide. Educational project.</value></data>
+  <data name="Nav_Main" xml:space="preserve"><value>Main navigation</value></data>
+  <data name="Nav_ToggleMenu" xml:space="preserve"><value>Toggle navigation</value></data>
+  <data name="Nav_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Nav_Beans" xml:space="preserve"><value>Coffee beans</value></data>
+  <data name="Nav_Milk" xml:space="preserve"><value>Milk</value></data>
+  <data name="Nav_Syrups" xml:space="preserve"><value>Syrups</value></data>
+  <data name="Nav_Methods" xml:space="preserve"><value>Brewing methods</value></data>
+  <data name="Nav_Recipes" xml:space="preserve"><value>Recipes</value></data>
+  <data name="Nav_Search" xml:space="preserve"><value>Search</value></data>
+  <data name="Lang_Switch" xml:space="preserve"><value>Interface language</value></data>
+  <data name="Home_Title" xml:space="preserve"><value>Coffee Encyclopedia</value></data>
+  <data name="Home_Lead" xml:space="preserve"><value>Learn about coffee beans, milk, syrups, brewing methods and recipes for your favorite drinks.</value></data>
+  <data name="Home_ShowAll" xml:space="preserve"><value>All recipes</value></data>
+  <data name="Home_Explore" xml:space="preserve"><value>Explore the encyclopedia</value></data>
+  <data name="Home_Featured" xml:space="preserve"><value>Featured drinks</value></data>
+  <data name="Home_Methods" xml:space="preserve"><value>Popular brewing methods</value></data>
+  <data name="Home_Count" xml:space="preserve"><value>Entries: {0}</value></data>
+  <data name="Home_Culture_Title" xml:space="preserve"><value>Coffee as culture</value></data>
+  <data name="Home_Culture_Text" xml:space="preserve"><value>Coffee is more than a drink: it is part of daily rituals, from a quick espresso at the bar to a slow cup at home. Different countries have developed their own ways to brew and enjoy it. This encyclopedia helps you better understand beans, milk, additions and brewing techniques.</value></data>
+  <data name="Tile_Beans" xml:space="preserve"><value>Origin, roast level and flavor notes of beans.</value></data>
+  <data name="Tile_Milk" xml:space="preserve"><value>Dairy and plant-based milk and how it foams.</value></data>
+  <data name="Tile_Syrups" xml:space="preserve"><value>Flavored syrups and coffee additions.</value></data>
+  <data name="Tile_Methods" xml:space="preserve"><value>Equipment, grind size, temperature and steps.</value></data>
+  <data name="Tile_Recipes" xml:space="preserve"><value>Drinks, ingredients, history and culture.</value></data>
+  <data name="Beans_Lead" xml:space="preserve"><value>A catalog of coffee beans: origin, variety, roast level and flavor notes.</value></data>
+  <data name="Milk_Lead" xml:space="preserve"><value>Types of milk and plant-based alternatives: texture, flavor and foaming ability.</value></data>
+  <data name="Syrups_Lead" xml:space="preserve"><value>Syrups and additions: flavor profile and suggested pairings.</value></data>
+  <data name="Methods_Lead" xml:space="preserve"><value>Ways to brew coffee: equipment, grind size, water temperature, ratio and steps.</value></data>
+  <data name="Recipes_Lead" xml:space="preserve"><value>Coffee drink recipes, their ingredients, history and cultural context.</value></data>
+  <data name="Filter_All" xml:space="preserve"><value>All</value></data>
+  <data name="Filter_Origin" xml:space="preserve"><value>Origin</value></data>
+  <data name="Filter_Variety" xml:space="preserve"><value>Variety</value></data>
+  <data name="Filter_Roast" xml:space="preserve"><value>Roast level</value></data>
+  <data name="Filter_Category" xml:space="preserve"><value>Category</value></data>
+  <data name="Filter_DrinkName" xml:space="preserve"><value>Drink name</value></data>
+  <data name="Filter_Apply" xml:space="preserve"><value>Apply</value></data>
+  <data name="Filter_Reset" xml:space="preserve"><value>Reset</value></data>
+  <data name="Empty_Results" xml:space="preserve"><value>Nothing found. Try changing the filters.</value></data>
+  <data name="Search_Label" xml:space="preserve"><value>Search query</value></data>
+  <data name="Search_Placeholder" xml:space="preserve"><value>Name or description…</value></data>
+  <data name="Search_Button" xml:space="preserve"><value>Search</value></data>
+  <data name="Search_Prompt" xml:space="preserve"><value>Enter a query to find beans, milk, syrups, brewing methods or recipes.</value></data>
+  <data name="Search_NoResults" xml:space="preserve"><value>No results found for "{0}".</value></data>
+  <data name="Search_Found" xml:space="preserve"><value>Found: {0}</value></data>
+  <data name="Card_Details" xml:space="preserve"><value>Details</value></data>
+  <data name="Modal_Loading" xml:space="preserve"><value>Loading…</value></data>
+  <data name="Modal_Error" xml:space="preserve"><value>Could not load the data. Please try again.</value></data>
+  <data name="Modal_NotFound" xml:space="preserve"><value>The entry was not found.</value></data>
+  <data name="Modal_Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Modal_Retry" xml:space="preserve"><value>Retry</value></data>
+  <data name="Sec_Origin" xml:space="preserve"><value>Origin</value></data>
+  <data name="Sec_Variety" xml:space="preserve"><value>Variety</value></data>
+  <data name="Sec_Roast" xml:space="preserve"><value>Roast</value></data>
+  <data name="Sec_Processing" xml:space="preserve"><value>Processing</value></data>
+  <data name="Sec_Flavors" xml:space="preserve"><value>Flavor notes</value></data>
+  <data name="Sec_BrewingMethods" xml:space="preserve"><value>Recommended brewing methods</value></data>
+  <data name="Sec_Category" xml:space="preserve"><value>Category</value></data>
+  <data name="Sec_Fat" xml:space="preserve"><value>Fat content</value></data>
+  <data name="Sec_Texture" xml:space="preserve"><value>Texture</value></data>
+  <data name="Sec_Foam" xml:space="preserve"><value>Foaming</value></data>
+  <data name="Sec_FlavorProfile" xml:space="preserve"><value>Flavor profile</value></data>
+  <data name="Sec_RecommendedRecipes" xml:space="preserve"><value>Recommended drinks</value></data>
+  <data name="Sec_Grind" xml:space="preserve"><value>Grind size</value></data>
+  <data name="Sec_Temp" xml:space="preserve"><value>Water temperature</value></data>
+  <data name="Sec_Time" xml:space="preserve"><value>Brew time</value></data>
+  <data name="Sec_Ratio" xml:space="preserve"><value>Coffee-to-water ratio</value></data>
+  <data name="Sec_Equipment" xml:space="preserve"><value>Equipment</value></data>
+  <data name="Sec_Steps" xml:space="preserve"><value>Steps</value></data>
+  <data name="Sec_Servings" xml:space="preserve"><value>Servings</value></data>
+  <data name="Sec_Ingredients" xml:space="preserve"><value>Ingredients</value></data>
+  <data name="Sec_Preparation" xml:space="preserve"><value>Preparation</value></data>
+  <data name="Sec_History" xml:space="preserve"><value>History and culture</value></data>
+  <data name="Sec_Bean" xml:space="preserve"><value>Recommended beans</value></data>
+  <data name="Sec_Milk" xml:space="preserve"><value>Recommended milk</value></data>
+  <data name="Sec_Syrups" xml:space="preserve"><value>Recommended syrups</value></data>
+  <data name="Unit_C" xml:space="preserve"><value>°C</value></data>
+  <data name="Unit_Min" xml:space="preserve"><value>min</value></data>
+  <data name="Unit_Sec" xml:space="preserve"><value>s</value></data>
+  <data name="RoastLevel_Light" xml:space="preserve"><value>Light</value></data>
+  <data name="RoastLevel_Medium" xml:space="preserve"><value>Medium</value></data>
+  <data name="RoastLevel_MediumDark" xml:space="preserve"><value>Medium-dark</value></data>
+  <data name="RoastLevel_Dark" xml:space="preserve"><value>Dark</value></data>
+  <data name="MilkCategory_Animal" xml:space="preserve"><value>Dairy</value></data>
+  <data name="MilkCategory_Plant" xml:space="preserve"><value>Plant-based</value></data>
+  <data name="SyrupCategory_Fruit" xml:space="preserve"><value>Fruit</value></data>
+  <data name="SyrupCategory_Nut" xml:space="preserve"><value>Nut</value></data>
+  <data name="SyrupCategory_Spice" xml:space="preserve"><value>Spice</value></data>
+  <data name="SyrupCategory_Sweet" xml:space="preserve"><value>Sweet</value></data>
+  <data name="SyrupCategory_Other" xml:space="preserve"><value>Other</value></data>
+  <data name="RecipeCategory_Black" xml:space="preserve"><value>Black coffee</value></data>
+  <data name="RecipeCategory_MilkBased" xml:space="preserve"><value>Milk-based drinks</value></data>
+  <data name="RecipeCategory_Iced" xml:space="preserve"><value>Iced drinks</value></data>
+  <data name="RecipeCategory_Dessert" xml:space="preserve"><value>Dessert drinks</value></data>
+  <data name="Error_Title_404" xml:space="preserve"><value>Page not found</value></data>
+  <data name="Error_Text_404" xml:space="preserve"><value>The address may be mistyped, or the entry no longer exists.</value></data>
+  <data name="Error_Title_Data" xml:space="preserve"><value>Could not load the data</value></data>
+  <data name="Error_Text_Data" xml:space="preserve"><value>The content is temporarily unavailable. Please try again later.</value></data>
+  <data name="Error_Title_Generic" xml:space="preserve"><value>Something went wrong</value></data>
+  <data name="Error_Text_Generic" xml:space="preserve"><value>An error occurred. Try refreshing the page or going back to the home page.</value></data>
+  <data name="Error_Back_Home" xml:space="preserve"><value>Back to home</value></data>
+</root>

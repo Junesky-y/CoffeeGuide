@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "slug": "ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Ethiopia",
+    "variety": "Arabica",
+    "roastLevel": "Light",
+    "flavorNotes": [
+      "Floral",
+      "Citrus",
+      "Tea-like"
+    ],
+    "processingMethod": "Washed",
+    "description": "Yirgacheffe is a well-known coffee-growing area in southern Ethiopia. Its coffees are usually valued for a light, aromatic profile with bright acidity. It shows well in filter methods, where delicate notes matter.",
+    "imagePath": null,
+    "recommendedBrewingMethodIds": [
+      2,
+      4
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "colombia-huila",
+    "name": "Colombia Huila",
+    "origin": "Colombia",
+    "variety": "Arabica",
+    "roastLevel": "Medium",
+    "flavorNotes": [
+      "Caramel",
+      "Nuts",
+      "Red fruit"
+    ],
+    "processingMethod": "Washed",
+    "description": "Colombia is one of the best-known arabica producers, and Huila is one of its major coffee regions. A balanced, sweet profile suits both filter coffee and milk-based drinks.",
+    "imagePath": null,
+    "recommendedBrewingMethodIds": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "brazil-santos",
+    "name": "Brazil Santos",
+    "origin": "Brazil",
+    "variety": "Arabica",
+    "roastLevel": "MediumDark",
+    "flavorNotes": [
+      "Nuts",
+      "Chocolate",
+      "Low acidity"
+    ],
+    "processingMethod": "Natural (dry)",
+    "description": "Brazil is the world's largest coffee producer. Brazilian beans often have a soft nutty-chocolate profile with moderate acidity, which is why they are popular for espresso and milk-based drinks.",
+    "imagePath": null,
+    "recommendedBrewingMethodIds": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "kenya-aa",
+    "name": "Kenya AA",
+    "origin": "Kenya",
+    "variety": "Arabica",
+    "roastLevel": "Medium",
+    "flavorNotes": [
+      "Blackcurrant",
+      "Citrus",
+      "Bright acidity"
+    ],
+    "processingMethod": "Washed",
+    "description": "AA is a bean-size grade in the Kenyan classification. Kenyan lots are often described as juicy, with bright acidity and berry notes.",
+    "imagePath": null,
+    "recommendedBrewingMethodIds": [
+      2
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "vietnam-robusta",
+    "name": "Vietnam Robusta",
+    "origin": "Vietnam",
+    "variety": "Robusta",
+    "roastLevel": "Dark",
+    "flavorNotes": [
+      "Bitter chocolate",
+      "Woody notes",
+      "Full body"
+    ],
+    "processingMethod": null,
+    "description": "Vietnam is one of the largest robusta producers. Robusta is usually stronger and more bitter than arabica and contains more caffeine; it is often added to espresso blends.",
+    "imagePath": null,
+    "recommendedBrewingMethodIds": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "espresso-blend",
+    "name": "Espresso blend",
+    "origin": "Blend of several regions",
+    "variety": "Arabica / Robusta",
+    "roastLevel": "MediumDark",
+    "flavorNotes": [
+      "Dark chocolate",
+      "Roasted nuts",
+      "Caramel"
+    ],
+    "processingMethod": null,
+    "description": "A blend is a mix of beans from different regions or varieties. The composition is chosen for balanced flavor and consistent results in espresso.",
+    "imagePath": null,
+    "recommendedBrewingMethodIds": [
+      1,
+      5
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "slug": "vanilla-syrup",
+    "name": "Vanilla syrup",
+    "category": "Sweet",
+    "flavorProfile": "Sweet, creamy, aromatic",
+    "description": "One of the most common coffee syrups. It adds gentle sweetness and a vanilla aroma.",
+    "recommendedRecipeIds": [
+      4,
+      5
+    ],
+    "imagePath": null
+  },
+  {
+    "id": 2,
+    "slug": "caramel-syrup",
+    "name": "Caramel syrup",
+    "category": "Sweet",
+    "flavorProfile": "Sweet, with a toasted-sugar note",
+    "description": "Adds sweetness and a caramel tone. It works well with milk-based drinks.",
+    "recommendedRecipeIds": [
+      4,
+      5,
+      6
+    ],
+    "imagePath": null
+  },
+  {
+    "id": 3,
+    "slug": "hazelnut-syrup",
+    "name": "Hazelnut syrup",
+    "category": "Nut",
+    "flavorProfile": "Nutty, aromatic",
+    "description": "A syrup with a hazelnut aroma. It emphasizes nutty notes in coffee and milk.",
+    "recommendedRecipeIds": [
+      3,
+      4
+    ],
+    "imagePath": null
+  },
+  {
+    "id": 4,
+    "slug": "cinnamon-syrup",
+    "name": "Cinnamon syrup",
+    "category": "Spice",
+    "flavorProfile": "Warm and spicy",
+    "description": "Adds a warm spicy note. It is often chosen for cozy autumn drinks.",
+    "recommendedRecipeIds": [
+      3
+    ],
+    "imagePath": null
+  },
+  {
+    "id": 5,
+    "slug": "raspberry-syrup",
+    "name": "Raspberry syrup",
+    "category": "Fruit",
+    "flavorProfile": "Berry, sweet-tart",
+    "description": "A berry syrup that is usually used in cold drinks.",
+    "recommendedRecipeIds": [
+      5
+    ],
+    "imagePath": null
+  }
+]

@@ -1,0 +1,43 @@
+@{
+    var current = Context.Request.Path;
+    var lang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var returnUrl = Uri.EscapeDataString(current.HasValue ? current.Value! : "/");
+
+    var items = new[]
+    {
+        (Url: "/", Key: "Nav_Home"),
+        (Url: "/coffee-beans", Key: "Nav_Beans"),
+        (Url: "/milk", Key: "Nav_Milk"),
+        (Url: "/syrups", Key: "Nav_Syrups"),
+        (Url: "/brewing-methods", Key: "Nav_Methods"),
+        (Url: "/recipes", Key: "Nav_Recipes"),
+        (Url: "/search", Key: "Nav_Search")
+    };
+}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-coffee" aria-label="@L["Nav_Main"]">
+        <div class="container">
+            <a class="navbar-brand" href="/">☕ @L["App_Name"]</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="@L["Nav_ToggleMenu"]">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    @foreach (var item in items)
+                    {
+                        var active = item.Url == "/" ? current == "/" : current.StartsWithSegments(item.Url);
+                        <li class="nav-item">
+                            <a class="nav-link @(active ? "active" : "")" href="@item.Url"
+                               aria-current="@(active ? "page" : null)">@L[item.Key]</a>
+                        </li>
+                    }
+                </ul>
+                <div class="lang-switch" role="group" aria-label="@L["Lang_Switch"]">
+                    <a class="lang-link @(lang == "uk" ? "active" : "")" href="/set-language?culture=uk&returnUrl=@returnUrl" lang="uk">UA</a>
+                    <a class="lang-link @(lang == "en" ? "active" : "")" href="/set-language?culture=en&returnUrl=@returnUrl" lang="en">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "slug": "whole-milk",
+    "name": "Цільне коров'яче молоко",
+    "category": "Animal",
+    "fatContentPercent": null,
+    "texture": "Кремова, насичена",
+    "foamingProperties": "Добре спінюється, піна виходить щільною та стійкою",
+    "flavorProfile": "М'який, злегка солодкуватий",
+    "description": "Класичний вибір для капучино та лате. Жирність залежить від виробника й вказана на упаковці.",
+    "imagePath": null
+  },
+  {
+    "id": 2,
+    "slug": "skim-milk",
+    "name": "Знежирене молоко",
+    "category": "Animal",
+    "fatContentPercent": null,
+    "texture": "Легка, рідша",
+    "foamingProperties": "Легко утворює об'ємну піну, але вона зазвичай повітряніша й менш кремова",
+    "flavorProfile": "Нейтральний, менш насичений",
+    "description": "Молоко з мінімальним вмістом жиру. Менше відчувається в чашці, тому кава лишається на першому плані.",
+    "imagePath": null
+  },
+  {
+    "id": 3,
+    "slug": "oat-milk",
+    "name": "Вівсяне молоко",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Кремова, м'яка",
+    "foamingProperties": "Залежить від виробника; варіанти «для бариста» зазвичай спінюються краще",
+    "flavorProfile": "М'який, злегка злаковий",
+    "description": "Одна з найпоширеніших рослинних альтернатив у кав'ярнях. Добре поєднується з еспресо.",
+    "imagePath": null
+  },
+  {
+    "id": 4,
+    "slug": "soy-milk",
+    "name": "Соєве молоко",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Помірно щільна",
+    "foamingProperties": "Зазвичай добре спінюється; у дуже гарячій або кислій каві може згортатися",
+    "flavorProfile": "Помітний бобовий присмак",
+    "description": "Давня рослинна альтернатива коров'ячому молоку. Для кави краще підігрівати його не надто сильно.",
+    "imagePath": null
+  },
+  {
+    "id": 5,
+    "slug": "almond-milk",
+    "name": "Мигдалеве молоко",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Легка, рідша",
+    "foamingProperties": "Піна зазвичай менш стійка",
+    "flavorProfile": "Горіховий, ледь солодкуватий",
+    "description": "Легка рослинна альтернатива з горіховим акцентом. Підходить для холодних напоїв.",
+    "imagePath": null
+  }
+]
