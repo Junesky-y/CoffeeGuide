@@ -1,0 +1,24 @@
+@page "/brewing-methods"
+@model IndexModel
+@{
+    ViewData["Title"] = L["Nav_Methods"].Value;
+}
+
+<h1 class="page-title">@L["Nav_Methods"]</h1>
+<p class="page-lead">@L["Methods_Lead"]</p>
+
+@if (Model.Cards.Count == 0)
+{
+    <partial name="_EmptyState" />
+}
+else
+{
+    <div class="row g-4">
+        @foreach (var card in Model.Cards)
+        {
+            <div class="col-12 col-sm-6 col-lg-4">
+                <partial name="_ContentCard" model="card" />
+            </div>
+        }
+    </div>
+}

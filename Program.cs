@@ -2,6 +2,7 @@ using System.Globalization;
 using CoffeeGuide.Data;
 using CoffeeGuide.Services;
 using CoffeeGuide.Services.Interfaces;
+using CoffeeGuide.ViewModels;
 using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IMilkService, MilkService>();
 builder.Services.AddScoped<ISyrupService, SyrupService>();
 builder.Services.AddScoped<IBrewingMethodService, BrewingMethodService>();
 builder.Services.AddScoped<ICoffeeRecipeService, CoffeeRecipeService>();
+builder.Services.AddScoped<DetailsFactory>();
 
 var app = builder.Build();
 

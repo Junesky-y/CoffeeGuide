@@ -1,0 +1,45 @@
+@page "/recipes"
+@model IndexModel
+@{
+    ViewData["Title"] = L["Nav_Recipes"].Value;
+}
+
+<h1 class="page-title">@L["Nav_Recipes"]</h1>
+<p class="page-lead">@L["Recipes_Lead"]</p>
+
+<form method="get" class="filter-bar row g-3 align-items-end">
+    <div class="col-12 col-md-4">
+        <label for="q" class="form-label">@L["Filter_DrinkName"]</label>
+        <input id="q" name="q" type="search" class="form-control" value="@Model.Query" maxlength="100" />
+    </div>
+    <div class="col-12 col-md-4">
+        <label for="category" class="form-label">@L["Filter_Category"]</label>
+        <select id="category" name="category" class="form-select">
+            <option value="">@L["Filter_All"]</option>
+            @foreach (var c in Enum.GetValues<RecipeCategory>())
+            {
+                <option value="@c" selected="@(c == Model.Category)">@L.EnumLabel(c)</option>
+            }
+        </select>
+    </div>
+    <div class="col-12 col-md-4 d-flex gap-2">
+        <button type="submit" class="btn btn-coffee">@L["Filter_Apply"]</button>
+        <a asp-page="/Recipes/Index" class="btn btn-outline-coffee">@L["Filter_Reset"]</a>
+    </div>
+</form>
+
+@if (Model.Cards.Count == 0)
+{
+    <partial name="_EmptyState" />
+}
+else
+{
+    <div class="row g-4">
+        @foreach (var card in Model.Cards)
+        {
+            <div class="col-12 col-sm-6 col-lg-4">
+                <partial name="_ContentCard" model="card" />
+            </div>
+        }
+    </div>
+}

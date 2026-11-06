@@ -1,0 +1,35 @@
+@model CardViewModel
+@{
+    var detailsUrl = Url.Page(Model.DetailsPage, "Details", new { id = Model.Id });
+    var buttonLabel = $"{L["Card_Details"].Value}: {Model.Title}";
+}
+<article class="card content-card h-100">
+    <div class="card-media">
+        @if (!string.IsNullOrWhiteSpace(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="@Model.Title" loading="lazy" class="card-img-top" />
+        }
+        else
+        {
+            <div class="card-placeholder" aria-hidden="true"><span>@Model.Emoji</span></div>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.Badge))
+        {
+            <span class="badge card-badge">@Model.Badge</span>
+        }
+    </div>
+    <div class="card-body d-flex flex-column">
+        <h2 class="card-title h5">@Model.Title</h2>
+        @if (!string.IsNullOrWhiteSpace(Model.Subtitle))
+        {
+            <p class="card-subtitle small text-muted mb-2">@Model.Subtitle</p>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.Text))
+        {
+            <p class="card-text">@Model.Text</p>
+        }
+        @* stretched-link робить клікабельною всю картку; кнопка доступна з клавіатури *@
+        <button type="button" class="btn btn-coffee mt-auto stretched-link"
+                data-details-url="@detailsUrl" aria-label="@buttonLabel">@L["Card_Details"]</button>
+    </div>
+</article>
