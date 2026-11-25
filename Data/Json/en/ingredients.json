@@ -3,7 +3,7 @@
     "id": 1,
     "category": "Coffee",
     "name": "Espresso",
-    "description": "A concentrated drink made from ground coffee and hot water under pressure.",
+    "description": "A concentrated coffee drink made by forcing hot water through ground coffee under pressure.",
     "imagePath": null
   },
   {
@@ -45,6 +45,41 @@
     "id": 7,
     "category": "Coffee",
     "name": "Ground coffee",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 8,
+    "category": "Milk",
+    "name": "Milk foam",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 9,
+    "category": "Water",
+    "name": "Cold water",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 10,
+    "category": "Sweetener",
+    "name": "Sugar",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 11,
+    "category": "Milk",
+    "name": "Cream",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 12,
+    "category": "Other",
+    "name": "Tonic water",
     "description": null,
     "imagePath": null
   }

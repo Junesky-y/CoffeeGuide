@@ -3,7 +3,7 @@
     "id": 1,
     "slug": "espresso-machine",
     "name": "Espresso machine",
-    "description": "Hot water under pressure passes through a tightly packed bed of ground coffee and produces a concentrated drink in a short time.",
+    "description": "Hot water under pressure passes through a firmly tamped bed of ground coffee, producing a concentrated drink in a short time.",
     "equipment": [
       "Espresso machine",
       "Grinder",
@@ -17,18 +17,18 @@
     "coffeeToWaterRatio": null,
     "steps": [
       "Grind the beans finely and measure the dose.",
-      "Distribute the coffee evenly in the portafilter and tamp it.",
-      "Lock the portafilter into the group and start the extraction.",
-      "Stop the extraction once you have the desired amount and serve immediately."
+      "Distribute the ground coffee evenly in the portafilter and tamp it.",
+      "Lock the portafilter into the group head and start the shot.",
+      "Stop the shot once you have the desired volume. Serve immediately."
     ],
-    "imagePath": null,
+    "imagePath": "/images/brewing/espresso-machine.jpg",
     "isFeatured": true
   },
   {
     "id": 2,
     "slug": "pour-over",
     "name": "Pour-over (V60)",
-    "description": "A filter method where hot water is slowly poured over ground coffee in a dripper with a paper filter. The cup tastes clean and clear.",
+    "description": "Pour-over is a manual brewing method in which hot water is slowly poured over ground coffee in a dripper lined with a paper filter. It produces a clean-tasting cup that brings out individual flavor notes.",
     "equipment": [
       "Dripper",
       "Paper filters",
@@ -42,20 +42,20 @@
     "brewTimeSeconds": 180,
     "coffeeToWaterRatio": "1:16",
     "steps": [
-      "Place the filter in the dripper, rinse it with hot water and discard the water.",
-      "Add the ground coffee and level the surface.",
+      "Place the filter in the dripper, rinse it with hot water, and discard the rinse water.",
+      "Add the ground coffee to the dripper and level the bed.",
       "Wet the coffee with a small amount of water and wait 30–45 seconds.",
-      "Slowly pour the remaining water in circles in several stages.",
-      "Wait until the water drains through and serve."
+      "Slowly pour in the remaining water in circular motions, in several stages.",
+      "Wait for the water to drain through the coffee, then serve."
     ],
-    "imagePath": null,
+    "imagePath": "/images/brewing/pour-over.jpg",
     "isFeatured": true
   },
   {
     "id": 3,
     "slug": "french-press",
     "name": "French press",
-    "description": "An immersion method: coffee steeps in hot water in a carafe, then a plunger with a mesh filter separates the grounds. The result is rich with a noticeable body.",
+    "description": "An immersion brewing method: ground coffee steeps in hot water in a carafe, then a plunger with a mesh filter separates the grounds. The result is rich and full-bodied.",
     "equipment": [
       "French press",
       "Kettle",
@@ -70,19 +70,19 @@
     "coffeeToWaterRatio": "1:15",
     "steps": [
       "Grind the coffee coarsely and add it to the carafe.",
-      "Pour hot water over it so that all the grounds are wet.",
-      "Cover with the lid without pressing the plunger and wait about 4 minutes.",
+      "Pour hot water over the coffee, making sure all the grounds are wet.",
+      "Cover with the lid without pressing the plunger and steep for about 4 minutes.",
       "Slowly press the plunger down.",
-      "Pour the coffee into cups right away so it does not over-extract on the grounds."
+      "Pour the coffee into cups immediately to prevent further extraction."
     ],
-    "imagePath": null,
+    "imagePath": "/images/brewing/french-press.jpg",
     "isFeatured": false
   },
   {
     "id": 4,
     "slug": "aeropress",
     "name": "AeroPress",
-    "description": "A compact device in which coffee steeps with water and is then pressed through a filter with a plunger. Parameters depend heavily on the chosen recipe, so only general steps are given here.",
+    "description": "A compact brewer in which coffee steeps in water and is then pressed through a filter with a plunger. Brewing parameters depend largely on the recipe, so only general steps are provided here.",
     "equipment": [
       "AeroPress",
       "Paper filter",
@@ -98,18 +98,18 @@
     "steps": [
       "Insert the filter into the cap and rinse it with hot water.",
       "Add the ground coffee to the chamber.",
-      "Add water and stir.",
-      "Insert the plunger and wait for the time given in your recipe.",
-      "Press slowly until you hear the hiss of air."
+      "Pour in the water and stir.",
+      "Insert the plunger into the chamber and wait for the steeping time specified in your recipe.",
+      "Slowly press the plunger until you hear a characteristic hiss."
     ],
-    "imagePath": null,
+    "imagePath": "/images/brewing/aeropress.jpg",
     "isFeatured": false
   },
   {
     "id": 5,
     "slug": "moka-pot",
     "name": "Moka pot",
-    "description": "A pot in which steam pressure pushes hot water up through ground coffee. The result is strong and concentrated, but it is not true espresso because the pressure is much lower.",
+    "description": "A stovetop brewer in which pressure from heated water pushes it up through ground coffee into the upper chamber. The result is strong and concentrated, but it is not espresso because the pressure is much lower.",
     "equipment": [
       "Moka pot",
       "Stove",
@@ -122,12 +122,65 @@
     "coffeeToWaterRatio": null,
     "steps": [
       "Fill the bottom chamber with water up to the safety valve.",
-      "Fill the funnel with coffee and level it without tamping.",
-      "Screw on the top part tightly.",
-      "Place it on low or medium heat with the lid open.",
-      "When the coffee stops rising, remove it from the heat and serve."
+      "Fill the filter basket with ground coffee and level it without tamping.",
+      "Screw the upper chamber on tightly.",
+      "Place the moka pot over low or medium heat with the lid open.",
+      "When the upper chamber is full and the flow starts sputtering, remove the pot from the stove."
     ],
-    "imagePath": null,
+    "imagePath": "/images/brewing/moka-pot.jpg",
     "isFeatured": true
+  },
+  {
+    "id": 6,
+    "slug": "cezve",
+    "name": "Cezve (ibrik)",
+    "description": "A traditional brewing method in which very finely ground coffee is heated with water in a small, long-handled metal pot. The coffee is served unfiltered, so the grounds settle at the bottom of the cup.",
+    "equipment": [
+      "Cezve",
+      "Stove",
+      "Grinder",
+      "Spoon"
+    ],
+    "recommendedGrindSize": "Very fine, like powder",
+    "waterTemperatureMinC": null,
+    "waterTemperatureMaxC": null,
+    "brewTimeSeconds": null,
+    "coffeeToWaterRatio": null,
+    "steps": [
+      "Grind the coffee to a very fine consistency.",
+      "Pour cold water into the cezve, add the coffee and sugar to taste, then stir.",
+      "Place the cezve over low heat and do not let the mixture boil.",
+      "When foam begins to rise to the surface, remove the cezve from the heat.",
+      "Let the grounds settle briefly, then carefully pour the coffee into cups."
+    ],
+    "imagePath": "/images/brewing/cezve.jpg",
+    "isFeatured": false
+  },
+  {
+    "id": 7,
+    "slug": "cold-brew",
+    "name": "Cold brew",
+    "description": "A brewing method in which coarsely ground coffee steeps in cold water for many hours. The result is usually smooth and refreshing, and it is often prepared as a concentrate.",
+    "equipment": [
+      "Jar or pitcher",
+      "Paper filter or fine mesh",
+      "Refrigerator",
+      "Scale",
+      "Grinder"
+    ],
+    "recommendedGrindSize": "Coarse",
+    "waterTemperatureMinC": null,
+    "waterTemperatureMaxC": null,
+    "brewTimeSeconds": null,
+    "coffeeToWaterRatio": null,
+    "steps": [
+      "Grind the coffee coarsely.",
+      "Combine the ground coffee and cold water in a container.",
+      "Cover the container and leave it in the refrigerator for about 12–18 hours.",
+      "Strain through a paper filter or a fine-mesh sieve.",
+      "Dilute the concentrate with water or milk and serve over ice."
+    ],
+    "imagePath": "/images/brewing/cold-brew.jpg",
+    "isFeatured": false
   }
 ]

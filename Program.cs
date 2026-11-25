@@ -28,6 +28,15 @@ builder.Services.AddScoped<DetailsFactory>();
 
 var app = builder.Build();
 
+// ---------- Обробка помилок: користувач не бачить stack trace ----------
+app.UseExceptionHandler("/Error");
+app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHsts();
+}
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

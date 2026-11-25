@@ -2,40 +2,54 @@
 @model IndexModel
 @{
     ViewData["Title"] = L["Nav_Milk"].Value;
+    var hasFilter = Model.Category.HasValue;
 }
 
-<h1 class="page-title">@L["Nav_Milk"]</h1>
-<p class="page-lead">@L["Milk_Lead"]</p>
+<div class="cg-page cg-page--milk">
+    <header class="cg-pagehead">
+        <div class="cg-wrap">
+            <p class="cg-kicker">@L["Home_Count", Model.Cards.Count]</p>
+            <h1 class="cg-pagehead__title">@L["Nav_Milk"]</h1>
+            <p class="cg-pagehead__lead">@L["Milk_Lead"]</p>
+        </div>
+    </header>
+    <div class="cg-wrap">
+        <button class="cg-filter-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#filterPanel" aria-expanded="@(hasFilter ? "true" : "false")" aria-controls="filterPanel">@L["Filter_Toggle"]</button>
 
-<form method="get" class="filter-bar row g-3 align-items-end" data-autosubmit>
-    <div class="col-12 col-md-4">
-        <label for="category" class="form-label">@L["Filter_Category"]</label>
-        <select id="category" name="category" class="form-select">
-            <option value="">@L["Filter_All"]</option>
-            @foreach (var c in Enum.GetValues<MilkCategory>())
-            {
-                <option value="@c" selected="@(c == Model.Category)">@L.EnumLabel(c)</option>
-            }
-        </select>
-    </div>
-    <div class="col-12 col-md-4 d-flex gap-2">
-        <button type="submit" class="btn btn-coffee">@L["Filter_Apply"]</button>
-        <a asp-page="/Milk/Index" class="btn btn-outline-coffee">@L["Filter_Reset"]</a>
-    </div>
-</form>
+        <div id="filterPanel" class="collapse d-md-block @(hasFilter ? "show" : "")">
+            <form method="get" class="cg-filters" data-autosubmit>
+                <div class="cg-field">
+                    <label for="category" class="cg-label">@L["Filter_Category"]</label>
+                    <div class="cg-select">
+                        <select id="category" name="category">
+                            <option value="">@L["Filter_All"]</option>
+                            @foreach (var c in Enum.GetValues<MilkCategory>())
+                            {
+                                <option value="@c" selected="@(c == Model.Category)">@L.EnumLabel(c)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="cg-filters__actions">
+                    <button type="submit" class="btn btn-coffee">@L["Filter_Apply"]</button>
+                    <a asp-page="/Milk/Index" class="cg-link">@L["Filter_Reset"]</a>
+                </div>
+            </form>
+        </div>
 
-@if (Model.Cards.Count == 0)
-{
-    <partial name="_EmptyState" />
-}
-else
-{
-    <div class="row g-4">
-        @foreach (var card in Model.Cards)
+        @if (Model.Cards.Count == 0)
         {
-            <div class="col-12 col-sm-6 col-lg-4">
-                <partial name="_ContentCard" model="card" />
+            <partial name="_EmptyState" />
+        }
+        else
+        {
+            <div class="cg-grid cg-grid--milk">
+                @foreach (var card in Model.Cards)
+                {
+                    <partial name="_ContentCard" model="card" />
+                }
             </div>
         }
     </div>
-}
+</div>

@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using CoffeeGuide.Helpers;
 using CoffeeGuide.Models;
 using Microsoft.Extensions.Options;
 
@@ -215,6 +216,7 @@ public sealed class ContentStore
 
     private void Link(RawContent c, string language)
     {
+        var missingImages = new List<string>();
         var ingredients = c.Ingredients.ToDictionary(x => x.Id);
         var beanIds = c.Beans.Select(x => x.Id).ToHashSet();
         var milkIds = c.Milks.Select(x => x.Id).ToHashSet();
@@ -226,17 +228,17 @@ public sealed class ContentStore
         {
             var owner = $"зерно {bean.Id}";
             bean.FlavorNotes ??= new();
-            bean.ImagePath = CheckImage(bean.ImagePath, owner, language);
+            bean.ImagePath = CheckImage(bean.ImagePath, owner, language, missingImages);
             bean.RecommendedBrewingMethodIds = KeepKnown(bean.RecommendedBrewingMethodIds, methodIds, owner, "спосіб приготування", language);
         }
 
         foreach (var milk in c.Milks)
-            milk.ImagePath = CheckImage(milk.ImagePath, $"молоко {milk.Id}", language);
+            milk.ImagePath = CheckImage(milk.ImagePath, $"молоко {milk.Id}", language, missingImages);
 
         foreach (var syrup in c.Syrups)
         {
             var owner = $"сироп {syrup.Id}";
-            syrup.ImagePath = CheckImage(syrup.ImagePath, owner, language);
+            syrup.ImagePath = CheckImage(syrup.ImagePath, owner, language, missingImages);
             syrup.RecommendedRecipeIds = KeepKnown(syrup.RecommendedRecipeIds, recipeIds, owner, "рецепт", language);
         }
 
@@ -244,16 +246,16 @@ public sealed class ContentStore
         {
             method.Equipment ??= new();
             method.Steps ??= new();
-            method.ImagePath = CheckImage(method.ImagePath, $"спосіб {method.Id}", language);
+            method.ImagePath = CheckImage(method.ImagePath, $"спосіб {method.Id}", language, missingImages);
         }
 
         foreach (var ingredient in c.Ingredients)
-            ingredient.ImagePath = CheckImage(ingredient.ImagePath, $"інгредієнт {ingredient.Id}", language);
+            ingredient.ImagePath = CheckImage(ingredient.ImagePath, $"інгредієнт {ingredient.Id}", language, missingImages);
 
         foreach (var recipe in c.Recipes)
         {
             var owner = $"рецепт {recipe.Id}";
-            recipe.ImagePath = CheckImage(recipe.ImagePath, owner, language);
+            recipe.ImagePath = CheckImage(recipe.ImagePath, owner, language, missingImages);
 
             var kept = new List<RecipeIngredient>();
             foreach (var ri in recipe.Ingredients ?? new List<RecipeIngredient>())
@@ -285,6 +287,12 @@ public sealed class ContentStore
             }
             recipe.RecommendedSyrupIds = KeepKnown(recipe.RecommendedSyrupIds, syrupIds, owner, "сироп", language);
         }
+
+        if (missingImages.Count > 0)
+        {
+            _logger.LogInformation("[{Language}] Не знайдено зображень: {Count} (буде показано заглушки). Наприклад: {Example}. Див. IMAGES.md.",
+                language, missingImages.Count, missingImages[0]);
+        }
     }
 
     private List<int> KeepKnown(List<int>? ids, HashSet<int> known, string owner, string kind, string language)
@@ -298,18 +306,22 @@ public sealed class ContentStore
         return result;
     }
 
-    /// <summary>Якщо зображення вказано, але файлу немає в wwwroot, повертає null (картка покаже заглушку).</summary>
-    private string? CheckImage(string? path, string owner, string language)
+    /// <summary>
+    /// Перевіряє фото. Якщо файлу немає в wwwroot (навіть з іншим розширенням), повертає null,
+    /// і картка показує заглушку. Відсутні файли рахуються й виводяться одним повідомленням.
+    /// </summary>
+    private string? CheckImage(string? path, string owner, string language, List<string> missing)
     {
         if (string.IsNullOrWhiteSpace(path)) return null;
 
-        if (!path.StartsWith('/') || path.Contains("..") ||
-            !_env.WebRootFileProvider.GetFileInfo(path).Exists)
+        if (!path.StartsWith('/') || path.Contains(".."))
         {
-            _logger.LogWarning("[{Language}] {Owner}: зображення '{Path}' не знайдено у wwwroot, буде показано заглушку.", language, owner, path);
+            _logger.LogWarning("[{Language}] {Owner}: некоректний шлях до зображення '{Path}'.", language, owner, path);
             return null;
         }
 
-        return path;
+        var found = ImageHelper.FindExisting(_env.WebRootFileProvider, path);
+        if (found is null) missing.Add(path);
+        return found;
     }
 }

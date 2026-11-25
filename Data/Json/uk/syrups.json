@@ -4,52 +4,54 @@
     "slug": "vanilla-syrup",
     "name": "Ванільний сироп",
     "category": "Sweet",
-    "flavorProfile": "Солодкий, кремовий, ароматний",
-    "description": "Один із найпоширеніших сиропів для кави. Додає м'яку солодкість і ванільний аромат.",
+    "flavorProfile": "Солодкий, із вершковими та ванільними нотами",
+    "description": "Один із найпоширеніших сиропів для кави. Додає напою м’яку солодкість і виразний аромат ванілі.",
     "recommendedRecipeIds": [
       4,
-      5
+      5,
+      11,
+      13
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/vanilla-syrup.jpg"
   },
   {
     "id": 2,
     "slug": "caramel-syrup",
     "name": "Карамельний сироп",
     "category": "Sweet",
-    "flavorProfile": "Солодкий, із нотою підсмаженого цукру",
-    "description": "Додає напою солодкість і відтінок карамелі. Добре поєднується з молочними напоями.",
+    "flavorProfile": "Солодкий, із нотами карамелізованого цукру",
+    "description": "Додає напою солодкості та карамельних нот. Добре поєднується з кавовими напоями на основі молока.",
     "recommendedRecipeIds": [
       4,
       5,
       6
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/caramel-syrup.jpg"
   },
   {
     "id": 3,
     "slug": "hazelnut-syrup",
-    "name": "Горіховий сироп (фундук)",
+    "name": "Сироп із фундука",
     "category": "Nut",
-    "flavorProfile": "Горіховий, ароматний",
-    "description": "Сироп із ароматом фундука. Підкреслює горіхові ноти в каві та молоці.",
+    "flavorProfile": "Горіховий, із виразним ароматом",
+    "description": "Сироп із ароматом фундука. Підкреслює горіхові ноти кави та добре поєднується з молоком.",
     "recommendedRecipeIds": [
       3,
       4
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/hazelnut-syrup.jpg"
   },
   {
     "id": 4,
     "slug": "cinnamon-syrup",
     "name": "Сироп із корицею",
     "category": "Spice",
-    "flavorProfile": "Теплий, пряний",
-    "description": "Додає напою теплу пряну нотку. Часто його обирають для затишних осінніх напоїв.",
+    "flavorProfile": "Пряний, із теплими ароматними нотами",
+    "description": "Додає напою теплу пряну нотку. Часто його обирають для осінніх кавових напоїв.",
     "recommendedRecipeIds": [
       3
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/cinnamon-syrup.jpg"
   },
   {
     "id": 5,
@@ -57,10 +59,34 @@
     "name": "Малиновий сироп",
     "category": "Fruit",
     "flavorProfile": "Ягідний, солодко-кислий",
-    "description": "Ягідний сироп, який зазвичай використовують у холодних напоях.",
+    "description": "Сироп із малиновим смаком, який найчастіше додають до холодних напоїв.",
     "recommendedRecipeIds": [
       5
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/raspberry-syrup.jpg"
+  },
+  {
+    "id": 6,
+    "slug": "chocolate-syrup",
+    "name": "Шоколадний сироп",
+    "category": "Sweet",
+    "flavorProfile": "Солодкий, із насиченим шоколадним смаком",
+    "recommendedRecipeIds": [
+      6
+    ],
+    "imagePath": "/images/syrups/chocolate-syrup.jpg",
+    "description": "Надає напою шоколадного смаку. Часто використовується для приготування моко."
+  },
+  {
+    "id": 7,
+    "slug": "coconut-syrup",
+    "name": "Кокосовий сироп",
+    "category": "Other",
+    "flavorProfile": "Солодкий, із тропічними нотами",
+    "recommendedRecipeIds": [
+      5
+    ],
+    "imagePath": "/images/syrups/coconut-syrup.jpg",
+    "description": "Сироп із виразним кокосовим ароматом. Підходить для холодних напоїв і кави з молоком."
   }
 ]

@@ -7,9 +7,9 @@
     "fatContentPercent": null,
     "texture": "Кремова, насичена",
     "foamingProperties": "Добре спінюється, піна виходить щільною та стійкою",
-    "flavorProfile": "М'який, злегка солодкуватий",
-    "description": "Класичний вибір для капучино та лате. Жирність залежить від виробника й вказана на упаковці.",
-    "imagePath": null
+    "flavorProfile": "М’який, злегка солодкуватий смак",
+    "description": "Класичний вибір для капучино та лате. Вміст жиру залежить від виробника й зазначений на упаковці.",
+    "imagePath": "/images/milk/whole-milk.jpg"
   },
   {
     "id": 2,
@@ -17,11 +17,11 @@
     "name": "Знежирене молоко",
     "category": "Animal",
     "fatContentPercent": null,
-    "texture": "Легка, рідша",
+    "texture": "Легка, рідка",
     "foamingProperties": "Легко утворює об'ємну піну, але вона зазвичай повітряніша й менш кремова",
-    "flavorProfile": "Нейтральний, менш насичений",
-    "description": "Молоко з мінімальним вмістом жиру. Менше відчувається в чашці, тому кава лишається на першому плані.",
-    "imagePath": null
+    "flavorProfile": "Нейтральний, менш насичений смак",
+    "description": "Молоко з мінімальним вмістом жиру. Має легший смак, тому кавові ноти в напої залишаються виразнішими.",
+    "imagePath": "/images/milk/skim-milk.jpg"
   },
   {
     "id": 3,
@@ -29,11 +29,11 @@
     "name": "Вівсяне молоко",
     "category": "Plant",
     "fatContentPercent": null,
-    "texture": "Кремова, м'яка",
+    "texture": "Кремова, м’яка",
     "foamingProperties": "Залежить від виробника; варіанти «для бариста» зазвичай спінюються краще",
-    "flavorProfile": "М'який, злегка злаковий",
+    "flavorProfile": "М’який смак із легкими злаковими нотами",
     "description": "Одна з найпоширеніших рослинних альтернатив у кав'ярнях. Добре поєднується з еспресо.",
-    "imagePath": null
+    "imagePath": "/images/milk/oat-milk.jpg"
   },
   {
     "id": 4,
@@ -44,8 +44,8 @@
     "texture": "Помірно щільна",
     "foamingProperties": "Зазвичай добре спінюється; у дуже гарячій або кислій каві може згортатися",
     "flavorProfile": "Помітний бобовий присмак",
-    "description": "Давня рослинна альтернатива коров'ячому молоку. Для кави краще підігрівати його не надто сильно.",
-    "imagePath": null
+    "description": "Рослинна альтернатива коров’ячому молоку. Для приготування кавових напоїв соєве молоко краще не перегрівати.",
+    "imagePath": "/images/milk/soy-milk.jpg"
   },
   {
     "id": 5,
@@ -53,10 +53,34 @@
     "name": "Мигдалеве молоко",
     "category": "Plant",
     "fatContentPercent": null,
-    "texture": "Легка, рідша",
+    "texture": "Легка, рідка",
     "foamingProperties": "Піна зазвичай менш стійка",
-    "flavorProfile": "Горіховий, ледь солодкуватий",
+    "flavorProfile": "Горіховий смак із легкою солодкуватістю",
     "description": "Легка рослинна альтернатива з горіховим акцентом. Підходить для холодних напоїв.",
-    "imagePath": null
+    "imagePath": "/images/milk/almond-milk.jpg"
+  },
+  {
+    "id": 6,
+    "slug": "coconut-milk",
+    "name": "Кокосове молоко",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Легка, трохи кремова",
+    "foamingProperties": "Піна зазвичай легка та недовговічна",
+    "flavorProfile": "Виразний кокосовий присмак",
+    "description": "Рослинна альтернатива з помітним ароматом кокоса. Додає напою тропічного відтінку.",
+    "imagePath": "/images/milk/coconut-milk.jpg"
+  },
+  {
+    "id": 7,
+    "slug": "lactose-free-milk",
+    "name": "Безлактозне молоко",
+    "category": "Animal",
+    "fatContentPercent": null,
+    "texture": "Подібна до звичайного молока",
+    "foamingProperties": "Зазвичай спінюється подібно до звичайного молока",
+    "flavorProfile": "Трохи солодший смак",
+    "description": "Коров’яче молоко, у якому лактозу розщеплено на простіші цукри. Підходить людям, які погано переносять лактозу.",
+    "imagePath": "/images/milk/lactose-free-milk.jpg"
   }
 ]

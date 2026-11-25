@@ -4,21 +4,27 @@
     ViewData["Title"] = L["Nav_Methods"].Value;
 }
 
-<h1 class="page-title">@L["Nav_Methods"]</h1>
-<p class="page-lead">@L["Methods_Lead"]</p>
-
-@if (Model.Cards.Count == 0)
-{
-    <partial name="_EmptyState" />
-}
-else
-{
-    <div class="row g-4">
-        @foreach (var card in Model.Cards)
+<div class="cg-page cg-page--methods cg-theme-lab">
+    <header class="cg-pagehead">
+        <div class="cg-wrap">
+            <p class="cg-kicker">@L["Home_Count", Model.Cards.Count]</p>
+            <h1 class="cg-pagehead__title">@L["Nav_Methods"]</h1>
+            <p class="cg-pagehead__lead">@L["Methods_Lead"]</p>
+        </div>
+    </header>
+    <div class="cg-wrap cg-lab-body">
+        @if (Model.Cards.Count == 0)
         {
-            <div class="col-12 col-sm-6 col-lg-4">
-                <partial name="_ContentCard" model="card" />
+            <partial name="_EmptyState" />
+        }
+        else
+        {
+            <div class="cg-grid cg-grid--methods">
+                @foreach (var card in Model.Cards)
+                {
+                    <partial name="_ContentCard" model="card" />
+                }
             </div>
         }
     </div>
-}
+</div>

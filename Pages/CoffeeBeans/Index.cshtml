@@ -2,60 +2,78 @@
 @model IndexModel
 @{
     ViewData["Title"] = L["Nav_Beans"].Value;
+    var hasFilter = !string.IsNullOrEmpty(Model.Origin) || !string.IsNullOrEmpty(Model.Variety) || Model.Roast.HasValue;
 }
 
-<h1 class="page-title">@L["Nav_Beans"]</h1>
-<p class="page-lead">@L["Beans_Lead"]</p>
+<div class="cg-page cg-page--beans">
+    <header class="cg-pagehead">
+        <div class="cg-wrap">
+            <p class="cg-kicker">@L["Home_Count", Model.Cards.Count]</p>
+            <h1 class="cg-pagehead__title">@L["Nav_Beans"]</h1>
+            <p class="cg-pagehead__lead">@L["Beans_Lead"]</p>
+        </div>
+    </header>
+    <div class="cg-wrap">
+        <button class="cg-filter-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#filterPanel" aria-expanded="@(hasFilter ? "true" : "false")" aria-controls="filterPanel">@L["Filter_Toggle"]</button>
 
-<form method="get" class="filter-bar row g-3 align-items-end" data-autosubmit>
-    <div class="col-12 col-md-3">
-        <label for="origin" class="form-label">@L["Filter_Origin"]</label>
-        <select id="origin" name="origin" class="form-select">
-            <option value="">@L["Filter_All"]</option>
-            @foreach (var o in Model.Origins)
-            {
-                <option value="@o" selected="@(o == Model.Origin)">@o</option>
-            }
-        </select>
-    </div>
-    <div class="col-12 col-md-3">
-        <label for="variety" class="form-label">@L["Filter_Variety"]</label>
-        <select id="variety" name="variety" class="form-select">
-            <option value="">@L["Filter_All"]</option>
-            @foreach (var v in Model.Varieties)
-            {
-                <option value="@v" selected="@(v == Model.Variety)">@v</option>
-            }
-        </select>
-    </div>
-    <div class="col-12 col-md-3">
-        <label for="roast" class="form-label">@L["Filter_Roast"]</label>
-        <select id="roast" name="roast" class="form-select">
-            <option value="">@L["Filter_All"]</option>
-            @foreach (var r in Enum.GetValues<RoastLevel>())
-            {
-                <option value="@r" selected="@(r == Model.Roast)">@L.EnumLabel(r)</option>
-            }
-        </select>
-    </div>
-    <div class="col-12 col-md-3 d-flex gap-2">
-        <button type="submit" class="btn btn-coffee">@L["Filter_Apply"]</button>
-        <a asp-page="/CoffeeBeans/Index" class="btn btn-outline-coffee">@L["Filter_Reset"]</a>
-    </div>
-</form>
+        <div id="filterPanel" class="collapse d-md-block @(hasFilter ? "show" : "")">
+            <form method="get" class="cg-filters" data-autosubmit>
+                <div class="cg-field">
+                    <label for="origin" class="cg-label">@L["Filter_Origin"]</label>
+                    <div class="cg-select">
+                        <select id="origin" name="origin">
+                            <option value="">@L["Filter_All"]</option>
+                            @foreach (var o in Model.Origins)
+                            {
+                                <option value="@o" selected="@(o == Model.Origin)">@o</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="cg-field">
+                    <label for="variety" class="cg-label">@L["Filter_Variety"]</label>
+                    <div class="cg-select">
+                        <select id="variety" name="variety">
+                            <option value="">@L["Filter_All"]</option>
+                            @foreach (var v in Model.Varieties)
+                            {
+                                <option value="@v" selected="@(v == Model.Variety)">@v</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="cg-field">
+                    <label for="roast" class="cg-label">@L["Filter_Roast"]</label>
+                    <div class="cg-select">
+                        <select id="roast" name="roast">
+                            <option value="">@L["Filter_All"]</option>
+                            @foreach (var r in Enum.GetValues<RoastLevel>())
+                            {
+                                <option value="@r" selected="@(r == Model.Roast)">@L.EnumLabel(r)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="cg-filters__actions">
+                    <button type="submit" class="btn btn-coffee">@L["Filter_Apply"]</button>
+                    <a asp-page="/CoffeeBeans/Index" class="cg-link">@L["Filter_Reset"]</a>
+                </div>
+            </form>
+        </div>
 
-@if (Model.Cards.Count == 0)
-{
-    <partial name="_EmptyState" />
-}
-else
-{
-    <div class="row g-4">
-        @foreach (var card in Model.Cards)
+        @if (Model.Cards.Count == 0)
         {
-            <div class="col-12 col-sm-6 col-lg-4">
-                <partial name="_ContentCard" model="card" />
+            <partial name="_EmptyState" />
+        }
+        else
+        {
+            <div class="cg-grid cg-grid--beans">
+                @foreach (var card in Model.Cards)
+                {
+                    <partial name="_ContentCard" model="card" />
+                }
             </div>
         }
     </div>
-}
+</div>

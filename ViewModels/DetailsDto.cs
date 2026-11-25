@@ -11,7 +11,7 @@ public class DetailsDto
     public string Title { get; set; } = string.Empty;
     public string? Subtitle { get; set; }
     public string? ImageUrl { get; set; }
-    public string Emoji { get; set; } = "☕";
+    public string Placeholder { get; set; } = Placeholders.Recipe;
     public string? Summary { get; set; }
     public List<DetailSection> Sections { get; set; } = new();
 

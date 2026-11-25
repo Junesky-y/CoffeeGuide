@@ -7,13 +7,13 @@
     "variety": "Arabica",
     "roastLevel": "Light",
     "flavorNotes": [
-      "Floral",
-      "Citrus",
-      "Tea-like"
+      "Floral notes",
+      "Citrus notes",
+      "Tea-like notes"
     ],
     "processingMethod": "Washed",
-    "description": "Yirgacheffe is a well-known coffee-growing area in southern Ethiopia. Its coffees are usually valued for a light, aromatic profile with bright acidity. It shows well in filter methods, where delicate notes matter.",
-    "imagePath": null,
+    "description": "Yirgacheffe is a well-known coffee-growing region in southern Ethiopia. Coffees from this area are valued for their light, aromatic profile and bright acidity. They work especially well with filter brewing, which brings out delicate flavor notes.",
+    "imagePath": "/images/beans/ethiopia-yirgacheffe.jpg",
     "recommendedBrewingMethodIds": [
       2,
       4
@@ -32,8 +32,8 @@
       "Red fruit"
     ],
     "processingMethod": "Washed",
-    "description": "Colombia is one of the best-known arabica producers, and Huila is one of its major coffee regions. A balanced, sweet profile suits both filter coffee and milk-based drinks.",
-    "imagePath": null,
+    "description": "Colombia is one of the best-known producers of Arabica, and Huila is one of the country’s leading coffee-growing regions. The beans have a balanced, sweet profile that works well both as filter coffee and in milk-based drinks.",
+    "imagePath": "/images/beans/colombia-huila.jpg",
     "recommendedBrewingMethodIds": [
       2,
       3,
@@ -52,13 +52,14 @@
       "Chocolate",
       "Low acidity"
     ],
-    "processingMethod": "Natural (dry)",
-    "description": "Brazil is the world's largest coffee producer. Brazilian beans often have a soft nutty-chocolate profile with moderate acidity, which is why they are popular for espresso and milk-based drinks.",
-    "imagePath": null,
+    "processingMethod": "Natural (dry process)",
+    "description": "Brazil is the world’s largest coffee producer. Brazilian beans often have a soft nutty and chocolatey profile with moderate acidity. They are commonly used for espresso and milk-based drinks.",
+    "imagePath": "/images/beans/brazil-santos.jpg",
     "recommendedBrewingMethodIds": [
       1,
       3,
-      5
+      5,
+      7
     ]
   },
   {
@@ -74,8 +75,8 @@
       "Bright acidity"
     ],
     "processingMethod": "Washed",
-    "description": "AA is a bean-size grade in the Kenyan classification. Kenyan lots are often described as juicy, with bright acidity and berry notes.",
-    "imagePath": null,
+    "description": "AA is a size grade in the Kenyan coffee classification, referring to large beans. Kenyan coffees are often described as juicy, with bright acidity and berry notes.",
+    "imagePath": "/images/beans/kenya-aa.jpg",
     "recommendedBrewingMethodIds": [
       2
     ]
@@ -88,23 +89,24 @@
     "variety": "Robusta",
     "roastLevel": "Dark",
     "flavorNotes": [
-      "Bitter chocolate",
+      "Dark chocolate",
       "Woody notes",
-      "Full body"
+      "Full-bodied"
     ],
     "processingMethod": null,
-    "description": "Vietnam is one of the largest robusta producers. Robusta is usually stronger and more bitter than arabica and contains more caffeine; it is often added to espresso blends.",
-    "imagePath": null,
+    "description": "Vietnam is one of the world’s largest robusta producers. Robusta is usually stronger and more bitter than Arabica and contains more caffeine. It is often added to espresso blends.",
+    "imagePath": "/images/beans/vietnam-robusta.jpg",
     "recommendedBrewingMethodIds": [
       1,
-      5
+      5,
+      6
     ]
   },
   {
     "id": 6,
     "slug": "espresso-blend",
     "name": "Espresso blend",
-    "origin": "Blend of several regions",
+    "origin": "Blend of beans from several regions",
     "variety": "Arabica / Robusta",
     "roastLevel": "MediumDark",
     "flavorNotes": [
@@ -113,11 +115,112 @@
       "Caramel"
     ],
     "processingMethod": null,
-    "description": "A blend is a mix of beans from different regions or varieties. The composition is chosen for balanced flavor and consistent results in espresso.",
-    "imagePath": null,
+    "description": "A blend is a mix of coffee beans from different regions or varieties. The beans are selected to create a balanced flavor and consistent results when brewing espresso.",
+    "imagePath": "/images/beans/espresso-blend.jpg",
     "recommendedBrewingMethodIds": [
       1,
       5
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "guatemala-antigua",
+    "name": "Guatemala Antigua",
+    "origin": "Guatemala",
+    "variety": "Arabica",
+    "roastLevel": "Medium",
+    "flavorNotes": [
+      "Chocolate",
+      "Spice",
+      "Balanced acidity"
+    ],
+    "processingMethod": "Washed",
+    "description": "Antigua is a well-known coffee-growing region in Guatemala, located in a valley surrounded by volcanoes. Coffees from this area are often described as balanced, with chocolate and spicy notes.",
+    "imagePath": "/images/beans/guatemala-antigua.jpg",
+    "recommendedBrewingMethodIds": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "costa-rica-tarrazu",
+    "name": "Costa Rica Tarrazú",
+    "origin": "Costa Rica",
+    "variety": "Arabica",
+    "roastLevel": "Medium",
+    "flavorNotes": [
+      "Citrus notes",
+      "Honey notes",
+      "Clean flavor"
+    ],
+    "processingMethod": "Washed",
+    "description": "Tarrazú is one of Costa Rica’s best-known coffee-growing regions, where coffee is grown at high elevations. Coffees from this area usually have a clean flavor and lively acidity.",
+    "imagePath": "/images/beans/costa-rica-tarrazu.jpg",
+    "recommendedBrewingMethodIds": [
+      2,
+      4
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "sumatra-mandheling",
+    "name": "Indonesia Sumatra Mandheling",
+    "origin": "Indonesia",
+    "variety": "Arabica",
+    "roastLevel": "MediumDark",
+    "flavorNotes": [
+      "Earthy notes",
+      "Full-bodied",
+      "Low acidity"
+    ],
+    "processingMethod": "Wet-hulled",
+    "description": "Coffee from Sumatra often has a full body, earthy notes and low acidity. These beans are known for a distinctive processing method called wet-hulling.",
+    "imagePath": "/images/beans/sumatra-mandheling.jpg",
+    "recommendedBrewingMethodIds": [
+      3,
+      5
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "india-monsooned-malabar",
+    "name": "India Monsooned Malabar",
+    "origin": "India",
+    "variety": "Arabica",
+    "roastLevel": "MediumDark",
+    "flavorNotes": [
+      "Spicy notes",
+      "Low acidity",
+      "Full body"
+    ],
+    "processingMethod": "Monsooned",
+    "description": "Monsooned Malabar is an Indian coffee whose beans are exposed to humid monsoon winds. This process changes the flavor profile: acidity decreases and the coffee develops a heavier body.",
+    "imagePath": "/images/beans/india-monsooned-malabar.jpg",
+    "recommendedBrewingMethodIds": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "philippines-liberica",
+    "name": "Philippines Liberica (Barako)",
+    "origin": "Philippines",
+    "variety": "Liberica",
+    "roastLevel": "Medium",
+    "flavorNotes": [
+      "Woody notes",
+      "Strong aroma"
+    ],
+    "processingMethod": null,
+    "description": "Liberica is a less common coffee species than Arabica and Robusta. In the Philippines, a well-known local type of Liberica is called Barako; it is usually described as strong and aromatic.",
+    "imagePath": "/images/beans/philippines-liberica.jpg",
+    "recommendedBrewingMethodIds": [
+      3,
+      6
     ]
   }
 ]

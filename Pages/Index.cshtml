@@ -1,10 +1,85 @@
-﻿@page
+@page "/"
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = L["Nav_Home"].Value;
+    var heroImage = Model.Home.HeroImage ?? "/images/placeholders/hero.svg";
+    var heroIsPlaceholder = Model.Home.HeroImage is null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="cg-hero">
+    <div class="cg-wrap cg-hero__grid">
+        <div class="cg-hero__text">
+            <h1 class="cg-hero__title">@L["Home_Title"]</h1>
+            <p class="cg-hero__lead">@L["Home_Lead"]</p>
+            <a asp-page="/Recipes/Index" class="btn btn-coffee cg-hero__btn">@L["Home_ShowAll"] <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="cg-hero__media">
+            <img src="@heroImage" alt="" class="@(heroIsPlaceholder ? "is-placeholder" : "")" />
+        </figure>
+    </div>
+</section>
+
+<section class="cg-section" aria-labelledby="explore-title">
+    <div class="cg-wrap">
+        <header class="cg-section__head">
+            <h2 id="explore-title" class="cg-section__title">@L["Home_Explore"]</h2>
+        </header>
+        <div class="cg-index">
+            @foreach (var tile in Model.Home.Tiles)
+            {
+                <a asp-page="@tile.Page" class="cg-index__row">
+                    <span class="cg-index__title">@L[tile.TitleKey]</span>
+                    <span class="cg-index__text">@L[tile.TextKey]</span>
+                    <span class="cg-index__count">@L["Home_Count", tile.Count]</span>
+                    <span class="cg-index__thumb">
+                        <img src="@(tile.ImagePath ?? tile.Placeholder)" alt="" loading="lazy" decoding="async"
+                             class="@(tile.ImagePath is null ? "is-placeholder" : "")" />
+                    </span>
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+@if (Model.Home.FeaturedRecipes.Count > 0)
+{
+    <section class="cg-section cg-section--tint" aria-labelledby="featured-title">
+        <div class="cg-wrap">
+            <header class="cg-section__head">
+                <h2 id="featured-title" class="cg-section__title">@L["Home_Featured"]</h2>
+                <a asp-page="/Recipes/Index" class="cg-link">@L["Home_ShowAll"] <span aria-hidden="true">→</span></a>
+            </header>
+            <div class="cg-featured">
+                @foreach (var card in Model.Home.FeaturedRecipes)
+                {
+                    <partial name="_ContentCard" model="card" />
+                }
+            </div>
+        </div>
+    </section>
+}
+
+@if (Model.Home.PopularMethods.Count > 0)
+{
+    <section class="cg-section" aria-labelledby="methods-title">
+        <div class="cg-wrap">
+            <header class="cg-section__head">
+                <h2 id="methods-title" class="cg-section__title">@L["Home_Methods"]</h2>
+                <a asp-page="/BrewingMethods/Index" class="cg-link">@L["Nav_Methods"] <span aria-hidden="true">→</span></a>
+            </header>
+            <div class="cg-grid cg-grid--methods">
+                @foreach (var card in Model.Home.PopularMethods)
+                {
+                    <partial name="_ContentCard" model="card" />
+                }
+            </div>
+        </div>
+    </section>
+}
+
+<section class="cg-culture">
+    <div class="cg-wrap">
+        <h2 class="cg-kicker">@L["Home_Culture_Title"]</h2>
+        <p class="cg-culture__text">@L["Home_Culture_Text"]</p>
+    </div>
+</section>

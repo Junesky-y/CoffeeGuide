@@ -1,32 +1,25 @@
 @* Єдине модальне вікно. Вміст заповнює wwwroot/js/details-modal.js даними з сервера. *@
-<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalTitle" aria-hidden="true"
+<div class="modal fade cg-modal" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalTitle" aria-hidden="true"
      data-msg-loading="@L["Modal_Loading"]" data-msg-error="@L["Modal_Error"]" data-msg-notfound="@L["Modal_NotFound"]">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-fullscreen-sm-down">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-lg-down">
         <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h2 class="modal-title h4" id="detailsModalTitle" tabindex="-1"></h2>
-                    <p class="modal-subtitle text-muted mb-0" id="detailsModalSubtitle" hidden></p>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@L["Modal_Close"]"></button>
-            </div>
+            <button type="button" class="btn-close cg-modal__close" data-bs-dismiss="modal" aria-label="@L["Modal_Close"]"></button>
             <div class="modal-body" aria-live="polite">
-                <div id="detailsModalState" class="details-state text-center py-5" role="status" hidden>
-                    <div class="spinner-border text-secondary mb-3" id="detailsModalSpinner" aria-hidden="true"></div>
-                    <p id="detailsModalStateText" class="mb-3"></p>
+                <div id="detailsModalState" class="cg-modal__state" role="status" hidden>
+                    <div class="spinner-border" id="detailsModalSpinner" aria-hidden="true"></div>
+                    <p id="detailsModalStateText"></p>
                     <button type="button" class="btn btn-outline-coffee" id="detailsModalRetry" hidden>@L["Modal_Retry"]</button>
                 </div>
-                <div id="detailsModalContent" hidden>
-                    <div class="row g-3 mb-3">
-                        <div class="col-12 col-md-5">
-                            <img id="detailsModalImage" class="details-image" alt="" hidden />
-                            <div id="detailsModalPlaceholder" class="details-placeholder" aria-hidden="true" hidden></div>
-                        </div>
-                        <div class="col-12 col-md-7">
-                            <p id="detailsModalSummary" class="mb-0"></p>
-                        </div>
+                <div id="detailsModalContent" class="cg-detail" hidden>
+                    <figure class="cg-detail__figure">
+                        <img id="detailsModalImage" class="details-image" alt="" hidden />
+                    </figure>
+                    <div class="cg-detail__main">
+                        <p class="cg-detail__kicker" id="detailsModalSubtitle" hidden></p>
+                        <h2 class="cg-detail__title" id="detailsModalTitle" tabindex="-1"></h2>
+                        <p class="cg-detail__summary" id="detailsModalSummary"></p>
+                        <div id="detailsModalSections"></div>
                     </div>
-                    <div id="detailsModalSections"></div>
                 </div>
             </div>
             <div class="modal-footer">

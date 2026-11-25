@@ -1,76 +1,522 @@
-/* ===== Герой головної ===== */
-.hero {
-    background: linear-gradient(135deg, var(--coffee-900), var(--coffee-600));
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 3rem 1.5rem;
-    box-shadow: var(--shadow);
-}
-.hero-title { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); }
-.hero-lead { max-width: 40rem; font-size: 1.1rem; color: rgba(255, 255, 255, .9); }
-.hero .btn-coffee { background: #e6b87a; border-color: #e6b87a; color: var(--coffee-900); }
-.hero .btn-coffee:hover { background: #f0c78f; border-color: #f0c78f; color: var(--coffee-900); }
+/* ==========================================================================
+   COFFEE FIELD JOURNAL — компоненти (components.css)
+   ========================================================================== */
 
-/* ===== Плитки розділів ===== */
-.tile {
+/* ===== Анімація появи (чиста CSS, без JavaScript) ===== */
+@keyframes cg-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes cg-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ===== Секції ===== */
+.cg-section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+.cg-section--tint { background: var(--paper-2); border-block: 1px solid var(--ink); }
+.cg-section__head {
     display: flex;
-    flex-direction: column;
-    gap: .35rem;
-    background: #fff;
-    border-radius: var(--radius);
-    padding: 1.25rem;
-    color: var(--text);
-    text-decoration: none;
-    box-shadow: var(--shadow);
-    transition: transform .15s ease, box-shadow .15s ease;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+    margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+    padding-bottom: .9rem;
+    border-bottom: 1px solid var(--ink);
 }
-.tile:hover, .tile:focus-visible { transform: translateY(-3px); box-shadow: 0 .7rem 1.5rem rgba(43, 27, 18, .16); color: var(--text); }
-.tile-emoji { font-size: 2rem; }
-.tile-title { font-family: Georgia, serif; font-size: 1.2rem; font-weight: 600; color: var(--coffee-900); }
-.tile-text { color: var(--muted); font-size: .95rem; }
-.tile-count { margin-top: auto; font-size: .85rem; color: var(--coffee-600); font-weight: 600; }
+.cg-section__title { font-weight: 800; font-size: clamp(1.8rem, 4.4vw, 3.25rem); line-height: 1; letter-spacing: -.025em; }
 
-.culture-block { background: var(--beige); border-radius: var(--radius); padding: 1.5rem; }
+/* ===== Обкладинка головної ===== */
+.cg-hero { padding: clamp(1.75rem, 5vw, 4rem) 0 clamp(2.5rem, 6vw, 5rem); border-bottom: 1px solid var(--ink); }
+.cg-hero__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.5rem, 4vw, 4.5rem); align-items: end; }
+.cg-hero__text > * { animation: cg-rise .8s var(--ease) both; }
+.cg-hero__text > :nth-child(2) { animation-delay: .08s; }
+.cg-hero__text > :nth-child(3) { animation-delay: .16s; }
+.cg-hero__text > :nth-child(4) { animation-delay: .24s; }
+.cg-hero__title {
+    margin: 0 0 clamp(1.25rem, 3vw, 2rem);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 6.8vw, 5.75rem);
+    line-height: .95;
+    letter-spacing: -.03em;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+.cg-hero__lead { max-width: 31rem; margin: 0 0 2rem; font-size: clamp(1.05rem, 2.2vw, 1.25rem); line-height: 1.55; color: var(--ink-2); }
+.cg-hero__btn { display: inline-flex; align-items: center; gap: .75rem; }
+.cg-hero__media { position: relative; margin: 0; animation: cg-fade 1.1s var(--ease) .1s both; }
+.cg-hero__media::before { content: ""; position: absolute; inset: 1.1rem -1.1rem -1.1rem 1.1rem; background: var(--gold); border: 1px solid var(--ink); }
+.cg-hero__media img { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--ink); background: var(--terra); }
+
+@media (max-width: 899.98px) {
+    .cg-hero__grid { grid-template-columns: 1fr; }
+    .cg-hero__media { margin-right: 1.1rem; }
+    .cg-hero__media img { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 575.98px) {
+    .cg-hero__btn { width: 100%; justify-content: space-between; }
+}
+
+/* ===== Індекс розділів (замість карток-плиток) ===== */
+.cg-index { counter-reset: idx; }
+.cg-index__row {
+    counter-increment: idx;
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1.7fr) minmax(0, 1.2fr) 8.5rem 6.5rem;
+    align-items: center;
+    gap: .75rem 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    transition: background .3s var(--ease), padding .3s var(--ease);
+}
+.cg-index__row::before { content: counter(idx, decimal-leading-zero); font-family: var(--font-mono); font-size: .8rem; color: var(--terra-ink); }
+.cg-index__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 2.9vw, 2.4rem); line-height: 1.05; letter-spacing: -.02em; hyphens: auto; transition: color .25s; }
+.cg-index__text { color: var(--ink-3); font-size: .98rem; }
+.cg-index__count { text-align: right; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+.cg-index__count::after { content: "\00a0→"; }
+.cg-index__thumb { display: block; width: 7rem; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--ink); }
+.cg-index__thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+
+@media (hover: hover) {
+    .cg-index__row:hover { background: var(--paper-2); padding-left: .75rem; padding-right: .75rem; }
+    .cg-index__row:hover .cg-index__title { color: var(--terra-ink); }
+    .cg-index__row:hover .cg-index__thumb img { transform: scale(1.08); }
+}
+@media (max-width: 899.98px) {
+    .cg-index__row { grid-template-columns: 2.5rem minmax(0, 1fr) 5rem; grid-template-areas: "n t i" "n x i" "n c i"; }
+    .cg-index__row::before { grid-area: n; align-self: start; padding-top: .45rem; }
+    .cg-index__title { grid-area: t; }
+    .cg-index__text { grid-area: x; }
+    .cg-index__count { grid-area: c; text-align: left; }
+    .cg-index__thumb { grid-area: i; width: 5rem; align-self: start; }
+}
 
 /* ===== Картки ===== */
-.content-card {
+.cg-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    counter-increment: card;
+}
+.cg-card__media { position: relative; overflow: hidden; border: 1px solid var(--ink); background: var(--paper-2); }
+.cg-card__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--ratio, 4 / 3);
+    object-fit: cover;
+    filter: saturate(.9) contrast(1.04) sepia(.08);   /* єдина обробка для всіх фото */
+    transition: transform .8s var(--ease);
+}
+.cg-card__media::before {   /* порядковий номер у каталозі */
+    content: counter(card, decimal-leading-zero);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: .2rem .5rem;
+    background: var(--paper);
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    color: var(--ink);
+}
+.cg-card__tag {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    max-width: 100%;
+    padding: .3rem .65rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+.cg-card__body { display: flex; flex-direction: column; gap: .5rem; flex: 1; padding-top: 1rem; }
+.cg-card__kicker { margin: 0; font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; color: var(--terra-ink); }
+.cg-card__title { margin: 0; font-weight: 700; font-size: 1.45rem; line-height: 1.1; letter-spacing: -.015em; transition: color .25s; }
+.cg-card__text { margin: 0; color: var(--ink-2); font-size: .96rem; line-height: 1.55; }
+.cg-card__more {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .55rem 0 .2rem;
+    background: none;
     border: 0;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform .15s ease, box-shadow .15s ease;
+    border-bottom: 1px solid var(--ink);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
-.content-card:hover { transform: translateY(-3px); box-shadow: 0 .7rem 1.5rem rgba(43, 27, 18, .16); }
-.card-media { position: relative; }
-.card-media img { height: 190px; width: 100%; object-fit: cover; }
-.card-placeholder {
-    height: 190px;
+.cg-card__more::after { content: ""; position: absolute; inset: 0; z-index: 3; }   /* вся картка клікабельна */
+.cg-card__more:focus-visible { outline: 0; }
+.cg-card__more:focus-visible::after { outline: 3px solid var(--terra); outline-offset: 5px; }
+.cg-card__arrow { display: inline-block; transition: transform .3s var(--ease); }
+
+@media (hover: hover) {
+    .cg-card:hover .cg-card__img { transform: scale(1.045); }
+    .cg-card:hover .cg-card__title { color: var(--terra-ink); }
+    .cg-card:hover .cg-card__arrow { transform: translateX(.35rem); }
+}
+
+/* --- Зерно: запис в атласі походження --- */
+.cg-card--bean { --ratio: 4 / 5; }
+.cg-card--bean .cg-card__kicker { color: var(--olive-ink); }
+.cg-card--bean .cg-card__tag { background: var(--olive-ink); }
+
+/* --- Рецепт: редакційна колекція --- */
+.cg-card--recipe .cg-card__tag { background: var(--terra-ink); }
+.cg-card--recipe .cg-card__title { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+
+/* --- Молоко: «зразок» у колі --- */
+.cg-card--milk { align-items: center; text-align: center; padding: 1.75rem 1.25rem 1.5rem; background: var(--paper-3); border: 1px solid var(--ink); }
+.cg-card--milk .cg-card__media { width: min(11.5rem, 78%); border: 0; overflow: visible; background: none; --ratio: 1 / 1; }
+.cg-card--milk .cg-card__media::before { display: none; }
+.cg-card--milk .cg-card__img { border-radius: 50%; border: 1px solid var(--ink); }
+.cg-card--milk .cg-card__tag { left: 50%; bottom: -.7rem; transform: translateX(-50%); width: max-content; background: var(--olive-ink); }
+.cg-card--milk .cg-card__body { align-items: center; padding-top: 1.5rem; }
+.cg-card--milk .cg-card__more { align-self: center; }
+
+/* --- Сироп: етикетка з золотою смугою --- */
+.cg-card--syrup { --ratio: 3 / 4; }
+.cg-card--syrup .cg-card__media { border-top: 8px solid var(--gold); }
+.cg-card--syrup .cg-card__tag { background: var(--paper); color: var(--ink); border-top: 1px solid var(--ink); border-right: 1px solid var(--ink); }
+.cg-card--syrup .cg-card__kicker { color: var(--ink-3); text-transform: none; letter-spacing: .02em; font-style: italic; font-family: var(--font-display); font-size: .95rem; }
+
+/* --- Спосіб приготування: рядок технічного каталога --- */
+.cg-card--method {
+    display: grid;
+    grid-template-columns: 3.25rem 13rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--line-strong);
+}
+.cg-card--method::before { content: counter(card, decimal-leading-zero); font-family: var(--font-mono); font-size: .8rem; color: var(--terra-ink); }
+.cg-card--method .cg-card__media::before { display: none; }
+.cg-card--method .cg-card__img { --ratio: 4 / 3; }
+.cg-card--method .cg-card__body { padding-top: 0; }
+.cg-card--method .cg-card__title { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.cg-card--method .cg-card__text { max-width: 44rem; }
+@media (max-width: 719.98px) {
+    .cg-card--method { grid-template-columns: 2.5rem minmax(0, 1fr); grid-template-areas: "n m" ". b"; gap: 1rem; }
+    .cg-card--method::before { grid-area: n; align-self: start; padding-top: .3rem; }
+    .cg-card--method .cg-card__media { grid-area: m; }
+    .cg-card--method .cg-card__body { grid-area: b; }
+}
+
+/* ===== Сітки ===== */
+.cg-grid { counter-reset: card; display: grid; gap: clamp(2rem, 4vw, 3rem) clamp(1rem, 2.5vw, 2rem); }
+.cg-grid > .cg-card { animation: cg-rise .7s var(--ease) both; }
+.cg-grid > .cg-card:nth-child(2) { animation-delay: .06s; }
+.cg-grid > .cg-card:nth-child(3) { animation-delay: .12s; }
+.cg-grid > .cg-card:nth-child(4) { animation-delay: .18s; }
+.cg-grid > .cg-card:nth-child(n+5) { animation-delay: .24s; }
+
+/* Атлас: колонки зі зсувом по вертикалі */
+.cg-grid--beans { grid-template-columns: 1fr; }
+@media (min-width: 520px) { .cg-grid--beans { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cg-grid--beans > .cg-card:nth-child(even) { margin-top: 2.5rem; } }
+@media (min-width: 820px) { .cg-grid--beans { grid-template-columns: repeat(3, minmax(0, 1fr)); } .cg-grid--beans > .cg-card:nth-child(even) { margin-top: 0; } .cg-grid--beans > .cg-card:nth-child(3n + 2) { margin-top: 3rem; } }
+@media (min-width: 1100px) { .cg-grid--beans { grid-template-columns: repeat(4, minmax(0, 1fr)); } .cg-grid--beans > .cg-card:nth-child(3n + 2) { margin-top: 0; } .cg-grid--beans > .cg-card:nth-child(4n + 2), .cg-grid--beans > .cg-card:nth-child(4n + 4) { margin-top: 3rem; } }
+
+/* Рецепти: асиметрична 12-колонкова композиція */
+.cg-grid--recipes { grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 640px) {
+    .cg-grid--recipes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cg-grid--recipes > .cg-card:first-child { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) {
+    .cg-grid--recipes { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-flow: dense; }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 1) { grid-column: span 7; --ratio: 4 / 3; }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 2) { grid-column: span 5; --ratio: 4 / 5; }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 3),
+    .cg-grid--recipes > .cg-card:nth-child(7n + 5) { grid-column: span 4; --ratio: 1 / 1; }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 4) { grid-column: span 4; --ratio: 4 / 5; }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 6),
+    .cg-grid--recipes > .cg-card:nth-child(7n + 7) { grid-column: span 6; --ratio: 16 / 10; }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 1) .cg-card__title { font-size: clamp(2rem, 3.6vw, 3rem); }
+    .cg-grid--recipes > .cg-card:nth-child(7n + 1) .cg-card__text { font-size: 1.05rem; max-width: 34rem; }
+}
+
+.cg-grid--milk { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr)); gap: 1.25rem; }
+.cg-grid--syrups { grid-template-columns: repeat(auto-fill, minmax(min(100%, 14.5rem), 1fr)); }
+@media (min-width: 900px) { .cg-grid--syrups > .cg-card:nth-child(even) { margin-top: 2rem; } }
+.cg-grid--methods { grid-template-columns: 1fr; gap: 0; border-bottom: 1px solid var(--line-strong); }
+.cg-section .cg-grid--methods > .cg-card:first-child { border-top: 0; padding-top: 0; }
+
+/* Результати пошуку: компактні горизонтальні рядки */
+.cg-grid--results { grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr)); gap: 1rem 2rem; }
+.cg-grid--results > .cg-card.cg-card {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    margin: 0;
+    padding: 1rem 0;
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--line-strong);
+    text-align: left;
+}
+.cg-grid--results > .cg-card::before { display: none; }
+.cg-grid--results .cg-card__media { --ratio: 4 / 3; width: auto; border: 1px solid var(--ink); overflow: hidden; }
+.cg-grid--results .cg-card__media::before, .cg-grid--results .cg-card__tag { display: none; }
+.cg-grid--results .cg-card__img { border: 0; border-radius: 0; aspect-ratio: 4 / 3; }
+.cg-grid--results .cg-card__body { padding-top: 0; align-items: flex-start; }
+.cg-grid--results .cg-card__title { font-size: 1.25rem; }
+.cg-grid--results .cg-card__text { display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Головна: «головний матеріал» + три компактні */
+.cg-featured { counter-reset: card; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-rows: repeat(3, min-content) 1fr; gap: 2.25rem clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.cg-featured > .cg-card { animation: cg-rise .7s var(--ease) both; }
+.cg-featured > .cg-card:first-child { grid-row: 1 / span 4; }
+.cg-featured > .cg-card:first-child .cg-card__img { --ratio: 4 / 5; }
+.cg-featured > .cg-card:first-child .cg-card__title { font-size: clamp(2rem, 4vw, 3.2rem); }
+.cg-featured > .cg-card:not(:first-child) { display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr); gap: 1.25rem; align-items: start; padding-top: 1.25rem; border-top: 1px solid var(--ink); }
+.cg-featured > .cg-card:not(:first-child) .cg-card__media::before { display: none; }
+.cg-featured > .cg-card:not(:first-child) .cg-card__img { --ratio: 1 / 1; }
+.cg-featured > .cg-card:not(:first-child) .cg-card__body { padding-top: 0; }
+.cg-featured > .cg-card:not(:first-child) .cg-card__tag { display: none; }
+.cg-featured > .cg-card:not(:first-child) .cg-card__title { font-size: 1.4rem; }
+@media (max-width: 899.98px) {
+    .cg-featured { grid-template-columns: 1fr; grid-template-rows: none; }
+    .cg-featured > .cg-card:first-child { grid-row: auto; }
+    .cg-featured > .cg-card:first-child .cg-card__img { --ratio: 4 / 3; }
+}
+
+/* ===== Культура (цитата) ===== */
+.cg-culture { padding: clamp(2.5rem, 7vw, 5.5rem) 0; background: var(--olive-ink); color: var(--paper); }
+.cg-culture .cg-wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); gap: 1.25rem clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.cg-culture .cg-kicker { margin: .6rem 0 0; color: var(--paper-2); }
+.cg-culture__text { margin: 0; font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: clamp(1.3rem, 2.7vw, 2.15rem); line-height: 1.32; letter-spacing: -.01em; }
+@media (max-width: 767.98px) { .cg-culture .cg-wrap { grid-template-columns: 1fr; } .cg-culture .cg-kicker { margin-top: 0; } }
+
+/* ===== Заголовок сторінки каталогу ===== */
+.cg-page { padding-bottom: clamp(3rem, 8vw, 5.5rem); }
+.cg-page.cg-theme-lab { padding-bottom: 0; }
+.cg-pagehead { position: relative; padding: clamp(2rem, 6vw, 4.5rem) 0 clamp(1.5rem, 4vw, 2.75rem); border-bottom: 1px solid var(--ink); }
+.cg-pagehead .cg-wrap { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 1rem clamp(1.5rem, 4vw, 4rem); align-items: end; }
+.cg-pagehead .cg-kicker { grid-column: 1 / -1; margin: 0; }
+.cg-pagehead__title { font-weight: 800; font-size: clamp(2.4rem, 8vw, 6.25rem); line-height: .95; letter-spacing: -.03em; hyphens: auto; overflow-wrap: break-word; }
+.cg-pagehead__lead { margin: 0; max-width: 26rem; color: var(--ink-2); font-size: 1.05rem; }
+.cg-pagehead .cg-wrap > * { animation: cg-rise .7s var(--ease) both; }
+.cg-pagehead .cg-wrap > :nth-child(2) { animation-delay: .06s; }
+.cg-pagehead .cg-wrap > :nth-child(3) { animation-delay: .12s; }
+@media (max-width: 767.98px) { .cg-pagehead .cg-wrap { grid-template-columns: 1fr; } }
+
+/* ===== Темізація розділів ===== */
+.cg-page--beans .cg-pagehead { background: url("/images/patterns/contours.svg") right center / cover no-repeat; }
+.cg-page--beans .cg-pagehead__title { color: var(--olive-ink); }
+
+.cg-page--recipes .cg-pagehead__title { text-decoration: underline; text-decoration-color: var(--terra); text-decoration-thickness: .06em; text-underline-offset: .12em; }
+
+.cg-page--milk .cg-pagehead { background: var(--paper-3) url("/images/placeholders/milk.svg") right -6rem center / auto 150% no-repeat; }
+.cg-page--milk .cg-pagehead::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--paper-3) 40%, rgba(250, 246, 236, 0)); pointer-events: none; }
+.cg-page--milk .cg-pagehead .cg-wrap { z-index: 1; }
+.cg-page--milk .cg-pagehead__title { color: var(--olive-ink); font-style: italic; font-weight: 700; }
+
+.cg-page--syrups .cg-pagehead { background: var(--gold); }
+.cg-page--syrups .cg-pagehead .cg-kicker { color: var(--ink); }
+.cg-page--syrups .cg-pagehead__lead { color: var(--ink); }
+
+/* Лабораторія: темна сторінка зі шкалою-сіткою */
+.cg-theme-lab {
+    --paper: #201D19;
+    --paper-2: #2C2823;
+    --paper-3: #26221E;
+    --ink: #F1EBDD;
+    --ink-2: #D9D0BF;
+    --ink-3: #B8AE9B;
+    --terra-ink: #E98F6F;
+    --olive-ink: #B3B78F;
+    --line: rgba(241, 235, 221, .22);
+    --line-strong: rgba(241, 235, 221, .5);
+    background: var(--paper) url("/images/patterns/grid.svg");
+    color: var(--ink);
+    min-height: 60vh;
+}
+.cg-theme-lab .cg-pagehead { border-bottom-color: var(--line-strong); }
+.cg-theme-lab .cg-pagehead__title { font-family: var(--font-mono); font-weight: 500; letter-spacing: -.04em; text-transform: uppercase; font-size: clamp(2rem, 6.4vw, 5rem); }
+.cg-theme-lab .btn-coffee { background: var(--gold); border-color: var(--gold); color: #201D19; }
+.cg-theme-lab .btn-coffee:hover { background: var(--terra); border-color: var(--terra); color: #F1EBDD; }
+.cg-theme-lab .cg-select select { color-scheme: dark; }
+.cg-theme-lab .cg-select select option { background: #26221E; color: #F1EBDD; }
+.cg-theme-lab .cg-card__media, .cg-theme-lab .cg-card__img { border-color: var(--line-strong); }
+.cg-theme-lab .cg-card--method::before { color: var(--gold); }
+.cg-theme-lab .cg-card__more { border-color: var(--ink); }
+.cg-theme-lab .cg-empty__plate { border-color: var(--line-strong); }
+
+/* Пошук: темна смуга з великим полем */
+.cg-page--search .cg-pagehead { background: var(--ink); color: var(--paper); border-bottom: 0; }
+.cg-page--search .cg-pagehead__title { color: var(--paper); }
+.cg-page--search .cg-pagehead .cg-kicker { color: var(--gold); }
+
+/* ===== Фільтри ===== */
+.cg-filter-toggle {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--beige), var(--beige-dark));
-    font-size: 3.5rem;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.25rem 0 1.25rem;
+    padding: .9rem 1rem;
+    background: transparent;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: .78rem;
+    font-weight: 500;
+    letter-spacing: .09em;
+    text-transform: uppercase;
 }
-.card-badge { position: absolute; top: .75rem; left: .75rem; background: var(--coffee-900); color: #fff; font-weight: 500; }
-.card-title { color: var(--coffee-900); }
+.cg-filter-toggle::after { content: "+"; font-size: 1.1rem; line-height: 1; }
+.cg-filter-toggle[aria-expanded="true"]::after { content: "—"; }
+.cg-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1.1rem 2rem;
+    align-items: end;
+    margin: 1.25rem 0 clamp(2rem, 4vw, 3rem);
+    padding: 1.25rem 0 1.4rem;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+.cg-filters__actions { display: flex; align-items: center; gap: 1.25rem; }
+@media (max-width: 767.98px) {
+    .cg-filters { grid-template-columns: 1fr; margin-top: -.25rem; padding: 1rem 0 1.25rem; }
+    .cg-filters__actions { justify-content: space-between; }
+}
+@media (min-width: 768px) { .cg-filter-toggle { display: none; } }
 
-.empty-state { color: var(--muted); }
+/* ===== Пошук ===== */
+.cg-search { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 2rem; align-items: end; margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(2rem, 4vw, 3rem); }
+.cg-search .cg-input { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 4.5vw, 3rem); line-height: 1.15; padding: .4rem 0; border-bottom-width: 2px; letter-spacing: -.02em; }
+.cg-search .cg-input:focus-visible { outline: 0; border-bottom-color: var(--terra); box-shadow: 0 2px 0 var(--terra); }
+@media (max-width: 575.98px) { .cg-search { grid-template-columns: 1fr; } .cg-search .btn { width: 100%; } }
+.cg-group { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.cg-group__title { display: flex; align-items: baseline; gap: .9rem; margin-bottom: .5rem; font-weight: 800; font-size: clamp(1.6rem, 3.6vw, 2.5rem); letter-spacing: -.02em; }
+.count-pill { font-family: var(--font-mono); font-weight: 500; font-size: .8rem; letter-spacing: .06em; color: var(--terra-ink); }
+.count-pill::before { content: "["; } .count-pill::after { content: "]"; }
+.cg-prompt { max-width: 34rem; color: var(--ink-3); }
 
-/* ===== Модальне вікно ===== */
-.modal-content { border: 0; border-radius: var(--radius); }
-.modal-header { background: var(--beige); border-bottom: 0; align-items: flex-start; }
-.modal-title:focus { outline: none; }
-.details-image { width: 100%; max-height: 260px; object-fit: cover; border-radius: .75rem; }
-.details-placeholder {
-    height: 160px;
+/* ===== Порожній стан і сторінка помилки ===== */
+.cg-empty, .cg-error { max-width: 34rem; margin: clamp(2rem, 6vw, 4rem) auto; text-align: center; }
+.cg-empty__plate, .state-illustration { display: block; width: min(15rem, 70%); aspect-ratio: 1; object-fit: cover; margin: 0 auto 1.5rem; border: 1px solid var(--ink); border-radius: 50%; }
+.cg-empty p, .cg-error p { color: var(--ink-2); }
+.cg-error h1 { margin-bottom: 1rem; font-weight: 800; font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1; letter-spacing: -.03em; }
+
+/* ===== Деталі: велике редакційне вікно ===== */
+.cg-modal .modal-dialog { --bs-modal-width: min(1100px, 100%); }
+.cg-modal.fade .modal-dialog { transform: translateY(28px); transition: transform .45s var(--ease); }
+.cg-modal.show .modal-dialog { transform: none; }
+.cg-modal .modal-content { background-color: var(--paper); background-image: none; border: 1px solid var(--ink); border-radius: 0; box-shadow: none; color: var(--ink); }
+.modal-backdrop { --bs-backdrop-bg: #201D19; --bs-backdrop-opacity: .78; }
+
+.cg-modal__close {
+    position: absolute;
+    top: max(.75rem, env(safe-area-inset-top));
+    right: 1.5rem;
+    z-index: 6;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    background-color: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: 0;
+    opacity: 1;
+    background-size: 1rem;
+}
+.cg-modal__close:hover { background-color: var(--gold); }
+.cg-modal .modal-body { padding: clamp(1rem, 3vw, 2.25rem); }
+.cg-modal .modal-footer { display: none }
+    
+
+.cg-modal__state {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--beige), var(--beige-dark));
-    border-radius: .75rem;
-    font-size: 3.5rem;
+    gap: 1rem;
+    padding: 4rem 1rem;
+    text-align: center;
 }
-.details-section { margin-top: 1.25rem; }
-.details-heading { text-transform: uppercase; letter-spacing: .04em; color: var(--coffee-600); font-family: "Segoe UI", sans-serif; font-size: .8rem; margin-bottom: .5rem; }
-.details-facts dt { color: var(--muted); font-weight: 600; }
-.details-facts dd { margin-bottom: .35rem; }
+.cg-modal__state p { margin: 0; font-family: var(--font-display); font-size: 1.4rem; }
+.cg-modal .spinner-border { color: var(--terra); }
+
+.cg-detail { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.cg-detail[hidden] { display: none; }
+.cg-detail__figure { position: sticky; top: 0; margin: 0; }
+.cg-detail__figure .details-image { display: block; width: 100%; aspect-ratio: 4 / 5; max-height: none; object-fit: cover; border: 1px solid var(--ink); border-radius: 0; background: var(--paper-2); filter: saturate(.92) contrast(1.04) sepia(.06); }
+.cg-detail__figure::before { content: ""; position: absolute; inset: .9rem -.9rem -.9rem .9rem; background: var(--gold); border: 1px solid var(--ink); }
+.cg-detail__figure .details-image { position: relative; }
+.cg-detail__kicker { margin: 0 3rem .6rem 0; font-family: var(--font-mono); font-size: .74rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-ink); }
+.cg-detail__title { margin: 0 0 1.25rem; font-weight: 800; font-size: clamp(2rem, 5vw, 3.75rem); line-height: .98; letter-spacing: -.03em; hyphens: auto; overflow-wrap: break-word; }
+.cg-detail__title:focus { outline: none; }
+.cg-detail__summary { margin: 0; font-size: 1.12rem; line-height: 1.65; color: var(--ink-2); }
+
+/* Секції, які створює details-modal.js */
+.cg-detail .details-section { margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--ink); }
+.cg-detail .details-heading { margin: 0 0 .85rem; font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-ink); }
+.cg-detail .details-section p { color: var(--ink-2); }
+.cg-detail .details-section ul { margin: 0; padding: 0; list-style: none; }
+.cg-detail .details-section ul > li { position: relative; padding: .5rem 0 .5rem 1.4rem; border-bottom: 1px solid var(--line); }
+.cg-detail .details-section ul > li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: .55rem; height: .55rem; background: var(--terra); }
+.cg-detail .details-section ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.cg-detail .details-section ol > li { counter-increment: step; display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); gap: .5rem; padding: .75rem 0; border-bottom: 1px solid var(--line); }
+.cg-detail .details-section ol > li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-size: .85rem; color: var(--terra-ink); padding-top: .15rem; }
+
+/* Таблиця фактів: переозначає Bootstrap .row / .col-sm-* з JavaScript */
+.cg-detail .details-facts.row { display: grid; grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr); gap: 0 1.5rem; margin: 0; --bs-gutter-x: 0; }
+.cg-detail .details-facts > dt, .cg-detail .details-facts > dd { width: auto; max-width: none; flex: none; margin: 0; padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.cg-detail .details-facts > dt { font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); padding-top: .8rem; }
+
+/* Пов'язані записи */
+.cg-detail .details-section .btn-sm { display: inline-flex; align-items: center; gap: .6rem; padding: .6rem 1rem; font-size: .74rem; }
+.cg-detail .details-section .btn-sm::after { content: "→"; transition: transform .25s var(--ease); }
+.cg-detail .details-section .btn-sm:hover::after { transform: translateX(.3rem); }
+
+@media (max-width: 991.98px) {
+    .cg-detail { grid-template-columns: 1fr; }
+    .cg-detail__figure { position: relative; margin-right: .9rem; }
+    .cg-detail__figure .details-image { aspect-ratio: 16 / 10; }
+    .cg-detail__kicker { margin-top: .25rem; }
+}
+@media (max-width: 575.98px) {
+    .cg-detail .details-facts.row { grid-template-columns: 1fr; }
+    .cg-detail .details-facts > dt { border-bottom: 0; padding-bottom: 0; }
+    .cg-detail .details-facts > dd { padding-top: .2rem; }
+}
+
+/* ===== Пошук у темній шапці та відступи лабораторії ===== */
+.cg-page--search .cg-search { grid-column: 1 / -1; margin: .5rem 0 0; }
+.cg-page--search .cg-label { color: #CFC6B4; }
+.cg-page--search .cg-input { color: var(--paper); border-bottom-color: var(--paper); }
+.cg-page--search .cg-input::placeholder { color: #A39A89; }
+.cg-page--search .btn-coffee { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.cg-page--search .btn-coffee:hover { background: var(--terra); border-color: var(--terra); color: var(--paper); }
+.cg-search-results { padding-top: clamp(1.75rem, 4vw, 3rem); }
+.cg-lab-body { padding-top: clamp(1.75rem, 4vw, 3rem); padding-bottom: clamp(2rem, 5vw, 4rem); }
+.cg-page > .cg-wrap:last-child { padding-bottom: 1rem; }
+
+/* ===== Вузькі телефони: компактніші каталоги ===== */
+@media (max-width: 519.98px) {
+    /* Атлас: горизонтальні рядки замість величезних вертикальних карток */
+    .cg-grid--beans { gap: 1.75rem; }
+    .cg-grid--beans > .cg-card { display: grid; grid-template-columns: minmax(0, 38%) minmax(0, 1fr); gap: 1rem; align-items: start; }
+    .cg-grid--beans .cg-card__body { padding-top: 0; }
+    .cg-grid--beans .cg-card__title { font-size: 1.25rem; }
+    .cg-grid--beans .cg-card__text { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* Молоко та сиропи: дві колонки */
+    .cg-grid--milk, .cg-grid--syrups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem .75rem; }
+    .cg-card--milk { padding: 1rem .6rem 1rem; }
+    .cg-grid--milk .cg-card__title, .cg-grid--syrups .cg-card__title { font-size: 1.1rem; }
+    .cg-grid--milk .cg-card__text, .cg-grid--syrups .cg-card__text { font-size: .88rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .cg-grid--syrups > .cg-card:nth-child(even) { margin-top: 0; }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+  <rect width="800" height="1000" fill="#C95738"/>
+  <g fill="none" stroke="#F1EBDD" stroke-opacity=".22" stroke-width="2">
+    <circle cx="400" cy="500" r="300"/><circle cx="400" cy="500" r="370"/><circle cx="400" cy="500" r="450"/><circle cx="400" cy="500" r="540"/>
+  </g>
+  <circle cx="400" cy="500" r="250" fill="#E7DDCC"/>
+  <circle cx="400" cy="500" r="232" fill="none" stroke="#C9BBA3" stroke-width="3"/>
+  <rect x="540" y="468" width="170" height="64" rx="32" fill="#F1EBDD"/>
+  <circle cx="400" cy="500" r="172" fill="#F1EBDD"/>
+  <circle cx="400" cy="500" r="148" fill="#2A1D15"/>
+  <circle cx="400" cy="500" r="130" fill="#7A4A2B"/>
+  <path d="M400 388c-62 0-112 50-112 112s50 112 112 112 112-50 112-112" fill="none" stroke="#C99A6B" stroke-width="7" stroke-linecap="round" stroke-opacity=".85"/>
+  <path d="M400 430c-40 0-72 32-72 72s32 72 72 72" fill="none" stroke="#C99A6B" stroke-width="6" stroke-linecap="round" stroke-opacity=".7"/>
+  <g transform="translate(120 140) rotate(-30) scale(0.55)"><ellipse rx="70" ry="100" fill="#201D19"/><path d="M0-98c-28 42 28 100 0 196" fill="none" stroke="#C95738" stroke-width="9" stroke-linecap="round"/></g>
+  <g transform="translate(690 190) rotate(20) scale(0.7)"><ellipse rx="70" ry="100" fill="#201D19"/><path d="M0-98c-28 42 28 100 0 196" fill="none" stroke="#C95738" stroke-width="9" stroke-linecap="round"/></g>
+  <g transform="translate(95 820) rotate(40) scale(0.6)"><ellipse rx="70" ry="100" fill="#201D19"/><path d="M0-98c-28 42 28 100 0 196" fill="none" stroke="#C95738" stroke-width="9" stroke-linecap="round"/></g>
+  <g transform="translate(700 860) rotate(-15) scale(0.5)"><ellipse rx="70" ry="100" fill="#201D19"/><path d="M0-98c-28 42 28 100 0 196" fill="none" stroke="#C95738" stroke-width="9" stroke-linecap="round"/></g>
+  <g transform="translate(640 1000) rotate(35) scale(0.45)"><ellipse rx="70" ry="100" fill="#201D19"/><path d="M0-98c-28 42 28 100 0 196" fill="none" stroke="#C95738" stroke-width="9" stroke-linecap="round"/></g>
+  <g transform="translate(170 1010) rotate(-20) scale(0.5)"><ellipse rx="70" ry="100" fill="#201D19"/><path d="M0-98c-28 42 28 100 0 196" fill="none" stroke="#C95738" stroke-width="9" stroke-linecap="round"/></g>
+  
+</svg>

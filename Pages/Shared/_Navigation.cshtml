@@ -14,16 +14,30 @@
         (Url: "/search", Key: "Nav_Search")
     };
 }
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-coffee" aria-label="@L["Nav_Main"]">
-        <div class="container">
-            <a class="navbar-brand" href="/">☕ @L["App_Name"]</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" aria-label="@L["Nav_ToggleMenu"]">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+@* Шапка закріплена зверху (position: sticky у site.css) *@
+<header class="site-header">
+    <nav class="navbar navbar-expand-xl navbar-coffee" aria-label="@L["Nav_Main"]">
+        <div class="container cg-wrap">
+            @* Назва сайту береться з ресурсу App_Name (Resources/SharedResource.*.resx).
+               Якщо назва не вміщається, site.js додає клас brand-compact: у шапці лишається лише логотип,
+               а назва показується зверху в розкритому меню. *@
+            @* Бренд і бургер — в окремому нерозривному рядку, щоб довга назва стискалася, а не виштовхувала бургер *@
+            <div class="navbar-top">
+                <a class="navbar-brand" href="/" aria-label="@L["App_Name"]" title="@L["App_Name"]">
+                    <img src="~/images/logo.svg" alt="" width="28" height="28" class="brand-logo" />
+                    <span class="brand-text">@L["App_Name"]</span>
+                </a>
+
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="@L["Nav_ToggleMenu"]">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="menu-brand-title" aria-hidden="true">@L["App_Name"]</div>
+
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
                     @foreach (var item in items)
                     {
                         var active = item.Url == "/" ? current == "/" : current.StartsWithSegments(item.Url);
@@ -33,6 +47,8 @@
                         </li>
                     }
                 </ul>
+
+                @* Перемикач мови всередині меню (на телефоні — у бургері) *@
                 <div class="lang-switch" role="group" aria-label="@L["Lang_Switch"]">
                     <a class="lang-link @(lang == "uk" ? "active" : "")" href="/set-language?culture=uk&returnUrl=@returnUrl" lang="uk">UA</a>
                     <a class="lang-link @(lang == "en" ? "active" : "")" href="/set-language?culture=en&returnUrl=@returnUrl" lang="en">EN</a>

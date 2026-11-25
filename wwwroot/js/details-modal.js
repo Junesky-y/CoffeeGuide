@@ -19,7 +19,6 @@
         retry: document.getElementById('detailsModalRetry'),
         content: document.getElementById('detailsModalContent'),
         image: document.getElementById('detailsModalImage'),
-        placeholder: document.getElementById('detailsModalPlaceholder'),
         summary: document.getElementById('detailsModalSummary'),
         sections: document.getElementById('detailsModalSections'),
         body: modalEl.querySelector('.modal-body')
@@ -105,7 +104,7 @@
         el.sections.replaceChildren();
         el.image.hidden = true;
         el.image.removeAttribute('src');
-        el.placeholder.hidden = true;
+        el.image.classList.remove('is-placeholder');
         el.content.hidden = true;
         el.state.hidden = true;
     }
@@ -129,16 +128,12 @@
         el.subtitle.hidden = !data.subtitle;
         el.summary.textContent = data.summary || '';
 
-        if (data.imageUrl) {
-            el.image.src = data.imageUrl;
-            el.image.alt = data.title || '';
-            el.image.hidden = false;
-            el.placeholder.hidden = true;
-        } else {
-            el.image.hidden = true;
-            el.placeholder.textContent = data.emoji || '☕';
-            el.placeholder.hidden = false;
-        }
+        // Фото запису або, якщо його немає, зображення-заглушка з сервера
+        var hasPhoto = !!data.imageUrl;
+        el.image.src = hasPhoto ? data.imageUrl : (data.placeholder || '');
+        el.image.alt = hasPhoto ? (data.title || '') : '';
+        el.image.classList.toggle('is-placeholder', !hasPhoto);
+        el.image.hidden = !el.image.getAttribute('src');
 
         el.sections.replaceChildren();
         (data.sections || []).forEach(function (section) {

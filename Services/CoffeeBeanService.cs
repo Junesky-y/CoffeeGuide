@@ -4,8 +4,6 @@ using CoffeeGuide.Services.Interfaces;
 
 namespace CoffeeGuide.Services;
 
-// Методи повертають Task, бо дані вже в пам'яті (кеш ContentStore).
-// Інтерфейс не зміниться, якщо пізніше джерелом стане база даних.
 public class CoffeeBeanService : ICoffeeBeanService
 {
     private readonly IContentLocalizationService _content;

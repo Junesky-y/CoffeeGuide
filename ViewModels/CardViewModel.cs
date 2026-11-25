@@ -9,4 +9,4 @@ public record CardViewModel(
     string? Badge,
     string? Text,
     string? ImagePath,
-    string Emoji);          // заглушка, якщо немає зображення
+    string Placeholder);    // зображення-заглушка, якщо немає фото

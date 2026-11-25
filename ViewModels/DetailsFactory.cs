@@ -28,7 +28,7 @@ public class DetailsFactory
     public DetailsDto ForBean(CoffeeBean b)
     {
         var content = _content.GetContent();
-        var dto = Start(b.Id, b.Slug, b.Name, $"{b.Origin} · {_l.EnumLabel(b.RoastLevel)}", b.ImagePath, "🌱", b.Description);
+        var dto = Start(b.Id, b.Slug, b.Name, $"{b.Origin} · {_l.EnumLabel(b.RoastLevel)}", b.ImagePath, Placeholders.Bean, b.Description);
 
         dto.Add(Facts(
             ("Sec_Origin", b.Origin),
@@ -46,7 +46,7 @@ public class DetailsFactory
     // ---------- Молоко ----------
     public DetailsDto ForMilk(MilkType m)
     {
-        var dto = Start(m.Id, m.Slug, m.Name, _l.EnumLabel(m.Category), m.ImagePath, "🥛", m.Description);
+        var dto = Start(m.Id, m.Slug, m.Name, _l.EnumLabel(m.Category), m.ImagePath, Placeholders.Milk, m.Description);
 
         dto.Add(Facts(
             ("Sec_Category", _l.EnumLabel(m.Category)),
@@ -61,7 +61,7 @@ public class DetailsFactory
     public DetailsDto ForSyrup(Syrup s)
     {
         var content = _content.GetContent();
-        var dto = Start(s.Id, s.Slug, s.Name, _l.EnumLabel(s.Category), s.ImagePath, "🍯", s.Description);
+        var dto = Start(s.Id, s.Slug, s.Name, _l.EnumLabel(s.Category), s.ImagePath, Placeholders.Syrup, s.Description);
 
         dto.Add(Facts(
             ("Sec_Category", _l.EnumLabel(s.Category)),
@@ -76,7 +76,7 @@ public class DetailsFactory
     // ---------- Спосіб приготування ----------
     public DetailsDto ForMethod(BrewingMethod m)
     {
-        var dto = Start(m.Id, m.Slug, m.Name, null, m.ImagePath, "♨️", m.Description);
+        var dto = Start(m.Id, m.Slug, m.Name, null, m.ImagePath, Placeholders.Method, m.Description);
 
         dto.Add(Facts(
             ("Sec_Grind", m.RecommendedGrindSize),
@@ -92,7 +92,7 @@ public class DetailsFactory
     public DetailsDto ForRecipe(CoffeeRecipe r)
     {
         var content = _content.GetContent();
-        var dto = Start(r.Id, r.Slug, r.Name, _l.EnumLabel(r.Category), r.ImagePath, "☕", r.FullDescription);
+        var dto = Start(r.Id, r.Slug, r.Name, _l.EnumLabel(r.Category), r.ImagePath, Placeholders.Recipe, r.FullDescription);
 
         dto.Add(Facts(("Sec_Servings", r.Servings?.ToString(CultureInfo.CurrentCulture))));
         dto.Add(ListOf("Sec_Ingredients", r.Ingredients.Select(FormatIngredient)));
@@ -114,14 +114,14 @@ public class DetailsFactory
 
     // ---------- Допоміжні методи ----------
 
-    private static DetailsDto Start(int id, string slug, string title, string? subtitle, string? image, string emoji, string? summary) => new()
+    private static DetailsDto Start(int id, string slug, string title, string? subtitle, string? image, string placeholder, string? summary) => new()
     {
         Id = id,
         Slug = slug,
         Title = title,
         Subtitle = subtitle,
         ImageUrl = image,
-        Emoji = emoji,
+        Placeholder = placeholder,
         Summary = summary
     };
 

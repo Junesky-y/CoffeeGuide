@@ -1,5 +1,25 @@
-<footer class="site-footer">
-    <div class="container py-3 small">
-        @L["Footer_Text", DateTime.Now.Year]
+@{
+    var links = new[]
+    {
+        (Url: "/", Key: "Nav_Home"),
+        (Url: "/coffee-beans", Key: "Nav_Beans"),
+        (Url: "/milk", Key: "Nav_Milk"),
+        (Url: "/syrups", Key: "Nav_Syrups"),
+        (Url: "/brewing-methods", Key: "Nav_Methods"),
+        (Url: "/recipes", Key: "Nav_Recipes"),
+        (Url: "/search", Key: "Nav_Search")
+    };
+}
+<footer class="cg-footer">
+    <div class="cg-wrap">
+        @* Назва сайту підставляється з ресурсу App_Name *@
+        <p class="cg-footer__mark">@L["App_Name"]</p>
+        <ul class="cg-footer__nav">
+            @foreach (var link in links)
+            {
+                <li><a href="@link.Url">@L[link.Key]</a></li>
+            }
+        </ul>
+        <p class="cg-footer__note">@L["Footer_Text", DateTime.Now.Year, L["App_Name"].Value]</p>
     </div>
 </footer>

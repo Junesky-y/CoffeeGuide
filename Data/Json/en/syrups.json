@@ -4,63 +4,89 @@
     "slug": "vanilla-syrup",
     "name": "Vanilla syrup",
     "category": "Sweet",
-    "flavorProfile": "Sweet, creamy, aromatic",
-    "description": "One of the most common coffee syrups. It adds gentle sweetness and a vanilla aroma.",
+    "flavorProfile": "Sweet, with creamy vanilla notes",
+    "description": "One of the most common coffee syrups. It adds gentle sweetness and a distinct vanilla aroma.",
     "recommendedRecipeIds": [
       4,
-      5
+      5,
+      11,
+      13
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/vanilla-syrup.jpg"
   },
   {
     "id": 2,
     "slug": "caramel-syrup",
     "name": "Caramel syrup",
     "category": "Sweet",
-    "flavorProfile": "Sweet, with a toasted-sugar note",
-    "description": "Adds sweetness and a caramel tone. It works well with milk-based drinks.",
+    "flavorProfile": "Sweet, with notes of caramelized sugar",
+    "description": "Adds sweetness and caramel notes to a drink. It pairs well with milk-based coffee drinks.",
     "recommendedRecipeIds": [
       4,
       5,
       6
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/caramel-syrup.jpg"
   },
   {
     "id": 3,
     "slug": "hazelnut-syrup",
     "name": "Hazelnut syrup",
     "category": "Nut",
-    "flavorProfile": "Nutty, aromatic",
-    "description": "A syrup with a hazelnut aroma. It emphasizes nutty notes in coffee and milk.",
+    "flavorProfile": "Nutty, with a distinct aroma",
+    "description": "A syrup with a hazelnut aroma. It brings out nutty notes in coffee and pairs well with milk.",
     "recommendedRecipeIds": [
       3,
       4
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/hazelnut-syrup.jpg"
   },
   {
     "id": 4,
     "slug": "cinnamon-syrup",
     "name": "Cinnamon syrup",
     "category": "Spice",
-    "flavorProfile": "Warm and spicy",
-    "description": "Adds a warm spicy note. It is often chosen for cozy autumn drinks.",
+    "flavorProfile": "Spicy, with warm aromatic notes",
+    "description": "Adds a warm, spicy note to a drink. It is often chosen for autumn coffee drinks.",
     "recommendedRecipeIds": [
       3
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/cinnamon-syrup.jpg"
   },
   {
     "id": 5,
     "slug": "raspberry-syrup",
     "name": "Raspberry syrup",
     "category": "Fruit",
-    "flavorProfile": "Berry, sweet-tart",
-    "description": "A berry syrup that is usually used in cold drinks.",
+    "flavorProfile": "Berry-like, sweet and tart",
+    "description": "A raspberry-flavored syrup most commonly used in cold drinks.",
     "recommendedRecipeIds": [
       5
     ],
-    "imagePath": null
+    "imagePath": "/images/syrups/raspberry-syrup.jpg"
+  },
+  {
+    "id": 6,
+    "slug": "chocolate-syrup",
+    "name": "Chocolate syrup",
+    "category": "Sweet",
+    "flavorProfile": "Sweet, with a rich chocolate flavor",
+    "recommendedRecipeIds": [
+      6
+    ],
+    "imagePath": "/images/syrups/chocolate-syrup.jpg",
+    "description": "Adds a chocolate flavor to a drink. It is often used to make mocha."
+  },
+  {
+    "id": 7,
+    "slug": "coconut-syrup",
+    "name": "Coconut syrup",
+    "category": "Other",
+    "flavorProfile": "Sweet, with tropical notes",
+    "recommendedRecipeIds": [
+      5
+    ],
+    "imagePath": "/images/syrups/coconut-syrup.jpg",
+    "description": "A syrup with a distinct coconut aroma. It works well in cold drinks and coffee with milk."
   }
 ]

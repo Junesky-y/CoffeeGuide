@@ -2,14 +2,14 @@
   {
     "id": 1,
     "slug": "whole-milk",
-    "name": "Whole cow's milk",
+    "name": "Whole milk",
     "category": "Animal",
     "fatContentPercent": null,
     "texture": "Creamy and rich",
     "foamingProperties": "Froths well and gives dense, stable foam",
     "flavorProfile": "Mild, slightly sweet",
-    "description": "A classic choice for cappuccino and latte. Fat content depends on the producer and is printed on the package.",
-    "imagePath": null
+    "description": "A classic choice for cappuccino and latte. The fat content varies by brand and is listed on the packaging.",
+    "imagePath": "/images/milk/whole-milk.jpg"
   },
   {
     "id": 2,
@@ -20,8 +20,8 @@
     "texture": "Light and thin",
     "foamingProperties": "Creates voluminous foam easily, but it is usually airier and less creamy",
     "flavorProfile": "Neutral, less rich",
-    "description": "Milk with minimal fat. It is less noticeable in the cup, so the coffee stays in the foreground.",
-    "imagePath": null
+    "description": "Milk with very little fat. Its lighter taste allows the coffee notes to stand out more.",
+    "imagePath": "/images/milk/skim-milk.jpg"
   },
   {
     "id": 3,
@@ -29,11 +29,11 @@
     "name": "Oat milk",
     "category": "Plant",
     "fatContentPercent": null,
-    "texture": "Creamy and soft",
+    "texture": "Creamy and smooth",
     "foamingProperties": "Depends on the brand; \"barista\" editions usually froth better",
-    "flavorProfile": "Mild, slightly cereal-like",
+    "flavorProfile": "Mild, with light cereal notes",
     "description": "One of the most common plant-based alternatives in coffee shops. It pairs well with espresso.",
-    "imagePath": null
+    "imagePath": "/images/milk/oat-milk.jpg"
   },
   {
     "id": 4,
@@ -44,8 +44,8 @@
     "texture": "Medium-bodied",
     "foamingProperties": "Usually froths well; may curdle in very hot or acidic coffee",
     "flavorProfile": "Noticeable beany note",
-    "description": "A long-standing plant-based alternative to cow's milk. For coffee it is better not to overheat it.",
-    "imagePath": null
+    "description": "A plant-based alternative to cow’s milk. Avoid overheating soy milk when preparing coffee drinks.",
+    "imagePath": "/images/milk/soy-milk.jpg"
   },
   {
     "id": 5,
@@ -55,8 +55,32 @@
     "fatContentPercent": null,
     "texture": "Light and thin",
     "foamingProperties": "Foam is usually less stable",
-    "flavorProfile": "Nutty, slightly sweet",
+    "flavorProfile": "Nutty, with a hint of sweetness",
     "description": "A light plant-based alternative with a nutty accent. It suits cold drinks.",
-    "imagePath": null
+    "imagePath": "/images/milk/almond-milk.jpg"
+  },
+  {
+    "id": 6,
+    "slug": "coconut-milk",
+    "name": "Coconut milk",
+    "category": "Plant",
+    "fatContentPercent": null,
+    "texture": "Light and slightly creamy",
+    "foamingProperties": "Foam is usually light and short-lived",
+    "flavorProfile": "Distinct coconut flavor",
+    "description": "A plant-based alternative with a noticeable coconut aroma. It adds a tropical touch to a drink.",
+    "imagePath": "/images/milk/coconut-milk.jpg"
+  },
+  {
+    "id": 7,
+    "slug": "lactose-free-milk",
+    "name": "Lactose-free milk",
+    "category": "Animal",
+    "fatContentPercent": null,
+    "texture": "Similar in texture to regular milk",
+    "foamingProperties": "Usually froths similarly to regular milk",
+    "flavorProfile": "Slightly sweeter taste",
+    "description": "Cow’s milk in which lactose has been broken down into simpler sugars. It is suitable for people who have difficulty digesting lactose.",
+    "imagePath": "/images/milk/lactose-free-milk.jpg"
   }
 ]

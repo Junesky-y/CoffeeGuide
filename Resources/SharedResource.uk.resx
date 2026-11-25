@@ -4,9 +4,9 @@
   <resheader name="version"><value>2.0</value></resheader>
   <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
   <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <data name="App_Name" xml:space="preserve"><value>Посібник зі створення кави</value></data>
+  <data name="App_Name" xml:space="preserve"><value>Кавовий Атлас</value></data>
   <data name="Skip_To_Content" xml:space="preserve"><value>Перейти до змісту</value></data>
-  <data name="Footer_Text" xml:space="preserve"><value>© {0} Посібник зі створення кави. Навчальний проєкт.</value></data>
+  <data name="Footer_Text" xml:space="preserve"><value>© {0} {1}. Навчальний проєкт.</value></data>
   <data name="Nav_Main" xml:space="preserve"><value>Головна навігація</value></data>
   <data name="Nav_ToggleMenu" xml:space="preserve"><value>Відкрити меню</value></data>
   <data name="Nav_Home" xml:space="preserve"><value>Головна</value></data>
@@ -17,15 +17,15 @@
   <data name="Nav_Recipes" xml:space="preserve"><value>Рецепти</value></data>
   <data name="Nav_Search" xml:space="preserve"><value>Пошук</value></data>
   <data name="Lang_Switch" xml:space="preserve"><value>Мова інтерфейсу</value></data>
-  <data name="Home_Title" xml:space="preserve"><value>Кавова енциклопедія</value></data>
+  <data name="Home_Title" xml:space="preserve"><value>Кавовий атлас</value></data>
   <data name="Home_Lead" xml:space="preserve"><value>Дізнавайтеся про кавові зерна, молоко, сиропи, способи приготування та рецепти улюблених напоїв.</value></data>
   <data name="Home_ShowAll" xml:space="preserve"><value>Усі рецепти</value></data>
-  <data name="Home_Explore" xml:space="preserve"><value>Розділи енциклопедії</value></data>
+  <data name="Home_Explore" xml:space="preserve"><value>Розділи атласу</value></data>
   <data name="Home_Featured" xml:space="preserve"><value>Рекомендовані напої</value></data>
   <data name="Home_Methods" xml:space="preserve"><value>Популярні способи приготування</value></data>
   <data name="Home_Count" xml:space="preserve"><value>Записів: {0}</value></data>
   <data name="Home_Culture_Title" xml:space="preserve"><value>Кава як культура</value></data>
-  <data name="Home_Culture_Text" xml:space="preserve"><value>Кава — це не лише напій, а й частина щоденних ритуалів: від швидкого еспресо біля стійки до неквапливої чашки вдома. У різних країнах склалися власні способи її готувати та пити. Ця енциклопедія допоможе краще зрозуміти зерна, молоко, добавки та техніки приготування.</value></data>
+  <data name="Home_Culture_Text" xml:space="preserve"><value>Кава — це не лише напій, а й частина щоденних ритуалів: від швидкого еспресо біля стійки до неквапливої чашки вдома. У різних країнах склалися власні способи її готувати та пити. Цей веб-застосунок допоможе краще зрозуміти зерна, молоко, добавки та техніки приготування.</value></data>
   <data name="Tile_Beans" xml:space="preserve"><value>Походження, обсмажування та смакові ноти зерен.</value></data>
   <data name="Tile_Milk" xml:space="preserve"><value>Тваринне й рослинне молоко та його піна.</value></data>
   <data name="Tile_Syrups" xml:space="preserve"><value>Смакові сиропи та добавки до кави.</value></data>
@@ -44,6 +44,7 @@
   <data name="Filter_DrinkName" xml:space="preserve"><value>Назва напою</value></data>
   <data name="Filter_Apply" xml:space="preserve"><value>Застосувати</value></data>
   <data name="Filter_Reset" xml:space="preserve"><value>Скинути</value></data>
+  <data name="Filter_Toggle" xml:space="preserve"><value>Фільтри</value></data>
   <data name="Empty_Results" xml:space="preserve"><value>Нічого не знайдено. Спробуйте змінити фільтри.</value></data>
   <data name="Search_Label" xml:space="preserve"><value>Пошуковий запит</value></data>
   <data name="Search_Placeholder" xml:space="preserve"><value>Назва або опис…</value></data>

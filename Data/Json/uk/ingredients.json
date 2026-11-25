@@ -3,7 +3,7 @@
     "id": 1,
     "category": "Coffee",
     "name": "Еспресо",
-    "description": "Концентрований напій із меленої кави, приготований під тиском гарячої води.",
+    "description": "Концентрований кавовий напій, який готують, пропускаючи гарячу воду крізь мелену каву під тиском.",
     "imagePath": null
   },
   {
@@ -45,6 +45,41 @@
     "id": 7,
     "category": "Coffee",
     "name": "Мелена кава",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 8,
+    "category": "Milk",
+    "name": "Молочна піна",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 9,
+    "category": "Water",
+    "name": "Холодна вода",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 10,
+    "category": "Sweetener",
+    "name": "Цукор",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 11,
+    "category": "Milk",
+    "name": "Вершки",
+    "description": null,
+    "imagePath": null
+  },
+  {
+    "id": 12,
+    "category": "Other",
+    "name": "Тонік",
     "description": null,
     "imagePath": null
   }

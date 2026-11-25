@@ -8,7 +8,7 @@ public class CoffeeBean
     public string Slug { get; set; } = string.Empty;
     public string Name { get; set; } = string.Empty;
     public string Origin { get; set; } = string.Empty;
-    public string Variety { get; set; } = string.Empty;      // Arabica, Robusta...
+    public string Variety { get; set; } = string.Empty;      
     public RoastLevel RoastLevel { get; set; }
     public List<string> FlavorNotes { get; set; } = new();
     public string? ProcessingMethod { get; set; }

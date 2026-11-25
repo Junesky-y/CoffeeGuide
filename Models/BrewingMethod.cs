@@ -11,8 +11,8 @@ public class BrewingMethod
     public int? WaterTemperatureMinC { get; set; }
     public int? WaterTemperatureMaxC { get; set; }
     public int? BrewTimeSeconds { get; set; }
-    public string? CoffeeToWaterRatio { get; set; }    // наприклад "1:16"
-    public List<string> Steps { get; set; } = new();   // порядок у списку = порядок кроків
+    public string? CoffeeToWaterRatio { get; set; }   
+    public List<string> Steps { get; set; } = new();  
     public string? ImagePath { get; set; }
-    public bool IsFeatured { get; set; }               // показувати на головній
+    public bool IsFeatured { get; set; }               
 }

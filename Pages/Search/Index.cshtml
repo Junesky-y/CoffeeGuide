@@ -1,0 +1,53 @@
+@page "/search"
+@model IndexModel
+@{
+    ViewData["Title"] = L["Nav_Search"].Value;
+}
+
+<div class="cg-page cg-page--search">
+    <header class="cg-pagehead">
+        <div class="cg-wrap">
+            <p class="cg-kicker">@L["App_Name"]</p>
+            <h1 class="cg-pagehead__title">@L["Nav_Search"]</h1>
+            <form method="get" role="search" class="cg-search">
+                <div class="cg-field">
+                    <label for="q" class="cg-label">@L["Search_Label"]</label>
+                    <input id="q" name="q" type="search" class="cg-input" value="@Model.Query"
+                           placeholder="@L["Search_Placeholder"]" maxlength="100" enterkeyhint="search" data-autofocus-desktop />
+                </div>
+                <button type="submit" class="btn btn-coffee">@L["Search_Button"]</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="cg-wrap cg-search-results">
+        @if (string.IsNullOrWhiteSpace(Model.Query))
+        {
+            <p class="cg-prompt">@L["Search_Prompt"]</p>
+        }
+        else if (Model.Result.Total == 0)
+        {
+            <div class="cg-empty" role="status">
+                <img src="/images/placeholders/recipe.svg" alt="" class="cg-empty__plate" />
+                <p>@L["Search_NoResults", Model.Query!]</p>
+            </div>
+        }
+        else
+        {
+            <p class="cg-kicker">@L["Search_Found", Model.Result.Total]</p>
+
+            @foreach (var group in Model.Result.Groups)
+            {
+                <section class="cg-group">
+                    <h2 class="cg-group__title">@L[group.TitleKey] <span class="count-pill">@group.Cards.Count</span></h2>
+                    <div class="cg-grid cg-grid--results">
+                        @foreach (var card in group.Cards)
+                        {
+                            <partial name="_ContentCard" model="card" />
+                        }
+                    </div>
+                </section>
+            }
+        }
+    </div>
+</div>

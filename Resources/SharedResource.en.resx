@@ -4,9 +4,9 @@
   <resheader name="version"><value>2.0</value></resheader>
   <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
   <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <data name="App_Name" xml:space="preserve"><value>Coffee Encyclopedia &amp; Brewing Guide</value></data>
+  <data name="App_Name" xml:space="preserve"><value>Atlas of Coffee</value></data>
   <data name="Skip_To_Content" xml:space="preserve"><value>Skip to content</value></data>
-  <data name="Footer_Text" xml:space="preserve"><value>© {0} Coffee Encyclopedia &amp; Brewing Guide. Educational project.</value></data>
+  <data name="Footer_Text" xml:space="preserve"><value>© {0} {1}. Educational project.</value></data>
   <data name="Nav_Main" xml:space="preserve"><value>Main navigation</value></data>
   <data name="Nav_ToggleMenu" xml:space="preserve"><value>Toggle navigation</value></data>
   <data name="Nav_Home" xml:space="preserve"><value>Home</value></data>
@@ -17,10 +17,10 @@
   <data name="Nav_Recipes" xml:space="preserve"><value>Recipes</value></data>
   <data name="Nav_Search" xml:space="preserve"><value>Search</value></data>
   <data name="Lang_Switch" xml:space="preserve"><value>Interface language</value></data>
-  <data name="Home_Title" xml:space="preserve"><value>Coffee Encyclopedia</value></data>
+  <data name="Home_Title" xml:space="preserve"><value>Atlas of Coffee</value></data>
   <data name="Home_Lead" xml:space="preserve"><value>Learn about coffee beans, milk, syrups, brewing methods and recipes for your favorite drinks.</value></data>
   <data name="Home_ShowAll" xml:space="preserve"><value>All recipes</value></data>
-  <data name="Home_Explore" xml:space="preserve"><value>Explore the encyclopedia</value></data>
+  <data name="Home_Explore" xml:space="preserve"><value>Explore the atlas</value></data>
   <data name="Home_Featured" xml:space="preserve"><value>Featured drinks</value></data>
   <data name="Home_Methods" xml:space="preserve"><value>Popular brewing methods</value></data>
   <data name="Home_Count" xml:space="preserve"><value>Entries: {0}</value></data>
@@ -44,6 +44,7 @@
   <data name="Filter_DrinkName" xml:space="preserve"><value>Drink name</value></data>
   <data name="Filter_Apply" xml:space="preserve"><value>Apply</value></data>
   <data name="Filter_Reset" xml:space="preserve"><value>Reset</value></data>
+  <data name="Filter_Toggle" xml:space="preserve"><value>Filters</value></data>
   <data name="Empty_Results" xml:space="preserve"><value>Nothing found. Try changing the filters.</value></data>
   <data name="Search_Label" xml:space="preserve"><value>Search query</value></data>
   <data name="Search_Placeholder" xml:space="preserve"><value>Name or description…</value></data>
